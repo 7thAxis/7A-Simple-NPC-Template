@@ -123,6 +123,10 @@
                 "AcceptGift_Disliked": "",
                 "AcceptGift_Hated": "",
 
+                //REJECTION
+                "RejectItem_<id>": "",
+                "RejectItem_<tag>": "",
+                
                 //BOUQUET RESPONSES
                 "AcceptBouquet": "",
                 "RejectBouquet_NotDatable": "",
