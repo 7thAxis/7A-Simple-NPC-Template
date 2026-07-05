@@ -144,7 +144,7 @@
                 "RejectGift_Divorced": "",
 
                 //PENDANT RESPONSES
-                "give_pendant": "",
+                //"give_pendant": "", As a workaround, add <NPCInternalName>_Engaged as an entry to Strings/StringsFromCSFiles instead. 
                 "RejectMermaidPendant_AlreadyAccepted_Engaged": "",
                 "RejectMermaidPendant_AlreadyAccepted_Married": "",
                 "RejectMermaidPendant_AlreadyAccepted": "",
