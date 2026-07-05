@@ -1,0 +1,171 @@
+{
+    "Changes": [
+        {
+            "LogName": "",
+            "Action": "EditData",
+            "Target": "characters/dialogue/npc",
+            "Entries": {
+
+                "Introduction": "",
+
+                //BASIC KEYS
+                "Mon": "",
+                "Tue": "",
+                "Wed": "",
+                "Thu": "",
+                "Fri": "",
+                "Sat": "",
+                "Sun": "",
+
+                "Mon2": "",
+                "Tue2": "",
+                "Wed2": "",
+                "Thu2": "",
+                "Fri2": "",
+                "Sat2": "",
+                "Sun2": "",
+
+                "Mon4": "",
+                "Tue4": "",
+                "Wed4": "",
+                "Thu4": "",
+                "Fri4": "",
+                "Sat4": "",
+                "Sun4": "",
+
+                "Mon6": "",
+                "Tue6": "",
+                "Wed6": "",
+                "Thu6": "",
+                "Fri6": "",
+                "Sat6": "",
+                "Sun6": "",
+
+                "Mon8": "",
+                "Tue8": "",
+                "Wed8": "",
+                "Thu8": "",
+                "Fri8": "",
+                "Sat8": "",
+                "Sun8": "",
+
+                "Mon10": "",
+                "Tue10": "",
+                "Wed10": "",
+                "Thu10": "",
+                "Fri10": "",
+                "Sat10": "",
+                "Sun10": "",
+
+                //BASIC SEASON KEYS
+                "spring_Mon": "",
+                "summer_Fri": "",
+                "fall_Tue": "",
+                "winter_Sat": "",
+
+                
+                //SEASONAL HEART LEVEL KEYS
+                "spring_Mon2": "",
+                "summer_Tue4": "",
+                "fall_Fri6": "",
+                "winter_Wed10": "",
+
+                //SPECIFIC DAY KEYS
+                "spring_<day>": "",
+                "summer_<day>": "",
+                "fall_<day>": "",
+                "winter_<day>": "",
+                "spring_<day>_<year>": "",
+                "summer_<day>_<year>": "",
+                "fall_<day>_<year>": "",
+                "winter_<day>_<year>": "",
+
+                //FLOWER DANCE
+                "AcceptedFlowerDance": "",
+                "RejectedFlowerDance": "",
+
+                //RESORT
+                "Resort": "",
+                "Resort_Entering": "",
+                "Resort_Leaving": "",
+                "Resort_Shore": "",
+                "Resort_Bar": "",
+                "Resort_Beach": "",
+
+                //CONVERSATION TOPICS (event responses)
+                "cc_Begin": "",
+                "cc_Complete": "",
+
+                //MOVIES
+                "MovieInvitation": "",
+                "RejectMovieTicket_AlreadyInvitedBySomeoneElse": "",
+                "RejectMovieTicket_AlreadyWatchedThisWeek": "",
+                "RejectMovieTicket_Divorced": "",
+                "RejectMovieTicket_DontWantToSeeThatMovie": "",
+                "RejectMovieTicket": "",
+
+                //BIRTHDAY GIFTS
+                "AcceptBirthdayGift_<id>": "",
+                "AcceptBirthdayGift_<tag>": "",
+                "AcceptBirthdayGift_<taste>": "",
+                "AcceptBirthdayGift_Negative": "",
+                "AcceptBirthdayGift_Positive": "",
+                "AcceptBirthdayGift": "",
+
+                //UNIQUE GIFT RESPONSES
+                "AcceptGift_<id>": "",
+                "AcceptGift_<tag>": "",
+                "AcceptGift_<taste>_<context tag>": "",
+                "AcceptGift": "",
+                "AcceptGift_Loved": "",
+                "AcceptGift_Liked": "",
+                "AcceptGift_Neutral": "",
+                "AcceptGift_Disliked": "",
+                "AcceptGift_Hated": "",
+
+
+                //ITEM REJECTION RESPONSES
+                "RejectItem_<id>": "",
+                "RejectItem_<tag>": "",
+                "accept_<item_id>": "",
+                "reject_<item_id>": "",
+
+                //BOUQUET RESPONSES
+                "AcceptBouquet": "",
+                "RejectBouquet_NotDatable": "",
+                "RejectBouquet_NpcAlreadyMarried": "",
+                "RejectBouquet_AlreadyAccepted_Engaged": "",
+                "RejectBouquet_AlreadyAccepted_Married": "",
+                "RejectBouquet_AlreadyAccepted": "",
+                "RejectBouquet_Divorced": "",
+                "RejectBouquet_VeryLowHearts": "",
+                "RejectBouquet_LowHearts": "",
+                "RejectBouquet": "",
+                "RejectGift_Divorced": "",
+
+                //PENDANT RESPONSES
+                "give_pendant": "",
+                "RejectMermaidPendant_AlreadyAccepted_Engaged": "",
+                "RejectMermaidPendant_AlreadyAccepted_Married": "",
+                "RejectMermaidPendant_AlreadyAccepted": "",
+                "RejectMermaidPendant_Divorced": "",
+                "RejectMermaidPendant_NeedHouseUpgrade": "",
+                "RejectMermaidPendant_NotDatable": "",
+                "RejectMermaidPendant_NpcWithSomeoneElse": "",
+                "RejectMermaidPendant_PlayerWithSomeoneElse": "",
+                "RejectMermaidPendant_Under8Hearts": "",
+                "RejectMermaidPendant_Under10Hearts": "",
+                "RejectMermaidPendant_Under10Hearts_AskedAgain": "",
+                "RejectMermaidPendant": "",
+
+                //MISC RESPONSES
+                "GreenRain": "",
+                "GreenRain_2": "",
+                "<location>": "",
+                "<location_X_Y>": "",
+                "Town_DumpsterDiveComment": "",
+                "HitBySlingshot": ""
+            }
+        }
+    ]
+}
