@@ -46,14 +46,14 @@
                         "WinterStarParticipant": false, 
                             // Included in the "Secret Santa". Make sure your NPC is accessible in the festival if set to true, or will cause a semi-softlock.
                         "UnlockConditions": null, 
-                            // Condition for unlocking an NPC (https://stardewvalleywiki.com/Modding:Game_state_queries)
+                            // Condition for unlocking an NPC. Not required. (https://stardewvalleywiki.com/Modding:Game_state_queries)
                         "SpawnIfMissing": true, 
                             // If for whatever reason the NPC fails to spawn, force them to spawn
                         "Home": [
                             {
                                 "Id": "Default",
                                 "Condition": null, 
-                                    //Condition for this spawn location being used by an NPC (https://stardewvalleywiki.com/Modding:Game_state_queries)
+                                    //Condition for this spawn location being used by an NPC. Not required. (https://stardewvalleywiki.com/Modding:Game_state_queries)
                                 "Location": "{{ModID}}_NPCHouse_Interior",
                                     // Location loaded in Data/Maps.json
                                 "Tile": { "X": 4, "Y": 5 },

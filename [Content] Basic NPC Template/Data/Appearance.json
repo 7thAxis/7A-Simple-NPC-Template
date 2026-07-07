@@ -5,6 +5,13 @@
             "Action": "Load",
             "Target": "Portraits/TemplateNPC, Characters/TemplateNPC, Portraits/TemplateNPC_FlowerDance, Characters/TemplateNPC_FlowerDance",
             "FromFile": "Assets/{{TargetPathOnly}}/{{TargetWithoutPath}}.png"
+        },
+        {
+            "LogName": "Load NPC Artwork - Alternate Version",
+            "Action": "EditImage",
+            "Target": "Portraits/TemplateNPC, Characters/TemplateNPC",
+            "FromFile": "Assets/{{TargetPathOnly}}/Alternate/{{TargetWithoutPath}}.png",
+            "When": { "AlternateNPCArt": true }
         }
     ]
 }

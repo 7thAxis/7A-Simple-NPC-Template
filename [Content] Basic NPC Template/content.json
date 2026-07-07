@@ -1,7 +1,32 @@
 {
     "Format": "2.6.0",
-    //"ConfigSchema": {},
+    "ConfigSchema": {
+
+        // See "i18n/Default/Config.json" to see how to make translation keys for configs.
+        // Configuration documentation - https://github.com/Pathoschild/StardewMods/blob/develop/ContentPatcher/docs/author-guide/config.md
+        // Be sure to install Generic Mod Config Menu for easier configuration testing
+
+        "AlternateNPCArt": {
+                // Name of your config. 
+                // You can make this display different in GMCM via i18n.
+            "AllowValues": "true, false",
+            "Default": false,
+            "AllowBlank": false,
+            "Description":"Example config that uses different portraits and sprites for the NPC.",
+            "Section": "Graphics"
+                // See "Data/Appearance.json" for this being configuration used.
+        },
+        "TestConfig": {
+            "AllowValues": "Option1, Option2, Option3",
+            "Default": "Option1",
+            "AllowBlank": false,
+            "Description":"A config that does nothing, but shows how to do a dropdown list.",
+            "Section": "Test"
+        }
+    },
+
     //"DynamicTokens": {},
+
     "Changes": [
         {
             "LogName": "Import File Loader",
