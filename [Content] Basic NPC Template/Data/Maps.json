@@ -1,12 +1,14 @@
 {
     // Tiled Map Editor - https://www.mapeditor.org/
+        // I will NOT be explaining map creation via tiled in this template. 
+        // Please refer to the wiki pages and ask questions in modding community spaces.
     // Map Wiki Page - https://stardewvalleywiki.com/Modding:Maps
     // Locations Wiki Page - https://stardewvalleywiki.com/Modding:Location_data
     // EditMap Content Patcher Docs - https://github.com/Pathoschild/StardewMods/blob/develop/ContentPatcher/docs/author-guide/action-editmap.md
 
     "Changes": [
 
-//LOAD TILESHEETS
+//LOAD CUSTOM TILESHEETS
     // This is where you will load the texture for your house. 
     // You can leave the tilesheet directly in the maps folder unloaded, but it's advised to load the tilesheet.
     // If the tilesheet is loaded it is easier for both you and other authors to access the sheet.
@@ -19,8 +21,6 @@
                 // You can do this by editing the map in Tiled or opening it in your code editor.
             "FromFile": "Assets/Tilesheets/NPCHouse.png"
         },
-//LOAD INTERIOR MAP & CREATE LOCATION
-
 //PATCH IN EXTERIOR MAP
         {
             "LogName": "Patch Exterior Map",
@@ -37,7 +37,97 @@
                 // Use either Tiled out of game or Debug Mode in-game to find these coords.
                 // Width and Height are the number of tiles your along the top and side of the map patch.
                 // Easiest way to figure that out is to count in tiled.
-        }
-//WARPS & TEXT STRINGS
+        },
+//LOAD INTERIOR MAP & CREATE HOME LOCATION
+        {
+            "LogName": "Load Interior Map",
+            "Action": "Load",
+            "Target": "Maps/NPCHouse_Interior",
+                // Change NPCHouse to something unique to avoid texture mod conflicts, such as ModID_NPCHouse_Interior
+                // You will need to change it inside the map as well.
+                // You can do this by editing the map in Tiled or opening it in your code editor.
+            "FromFile": "Assets/Maps/NPCHouse_Interior.tmx"
+        },
+        {
+            "LogName": "Create House Location",
+            "Action": "EditData",
+            "Target": "Data/Locations",
+            "Entries": {
+                "{{ModID}}_NPCHouse_Interior": {
+                    "MusicDefault": "fieldofficeTentMusic",
+                        // Delete this if you want to use normal over-world music
+                        // For finding in-game tracks, I recommend using Soundboard (https://www.nexusmods.com/stardewvalley/mods/34968)
+                    "DisplayName": "{{i18n:Maps.NPCHouse.Music}}",
+                        // Connects to "i18n" in the root folder of your mod.
+                    "DefaultArrivalTile": { "X": 3, "Y": 10 },
+                        // This tile is primarily used for debugging, such as when you warp. 
+                        // Warps are typically handled by map properties, not this.
+                        // The command to test will be debug warp YOURMODID_NPCHouse_Interior (or whatever you change it to)
+                    "CreateOnLoad": { "MapPath": "Maps/NPCHouse_Interior" },
+                        // This map is the one you loaded in "Load Interior Map"
+                        // DO NOT use a file path from your assets folder. 
+                        // The game is looking for the map you already loaded in.
+                }
+            }
+        },
+//WARPS
+    // NOTE: You can do these actions inside of Tiled Map Editor itself.
+    // However doing it within content patcher gives you more fine-tuned control and I personally find it easier to edit.
+        {
+            "LogName": "Add warp OUT OF House Interior",
+            "Action": "EditMap",
+            "Target": "Maps/NPCHouse_Interior",
+                // Target the map from "Load Interior Map" not the location ID in "Create House Location"
+                // You are editing the MAP not the in-game LOCATION DATA
+            "AddWarps": [  "3 12 Town 29 69" ]
+                // x y coordinate of the house INTERIOR tile you want to exit the map followed by location of destination and its x y coordinate
+                // x y DestinationLocation x y
+        },
+        {
+            "LogName": "Add warp INTO House Interior",
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+                // Map you want to target to add your warp into the house
+            "MapTiles": [
+                {
+                    "Position": { "X": 29, "Y": 68 },
+                        // Tile of the 
+                    "Layer": "Buildings",
+                    "SetProperties": { "Action": "Warp 3 10 {{ModID}}_NPCHouse_Interior" }
+                        // x y of the tile you want to land on after clicking the warp, followed by the destination location
+                        // USE LOCATION DATA from "Create House Location" for this, not the MAP
+                        // This creates a clickable warp.
+                }
+            ]
+        },
+//TEXT STRINGS
+        {
+            "LogName": "Add warp INTO House Interior",
+            "Action": "EditMap",
+            "Target": "Maps/NPCHouse_Interior",
+                // Map you want to add text to.
+            "MapTiles": [
+                {
+                    "Position": { "X": 6, "Y": 6 },
+                        // Tile you want to add clickable text to
+                    "Layer": "Buildings",
+                    "SetProperties": { "Action": "MineSign {{i18n:Maps.NoteMessage}}" }
+                        // There are several ways to add messages to maps. 
+                        // This is the simplest method to quickly add text to a map and my preferred method.
+                        // I suggest reading up on Action Message on this page (https://stardewvalleywiki.com/Modding:Maps)
+                },
+                {
+                    "Position": { "X": 9, "Y": 8 },
+                    "Layer": "Buildings",
+                    "SetProperties": { "Action": "MineSign {{i18n:Maps.Trash}}" }
+                },
+                {
+                    "Position": { "X": 9, "Y": 4 },
+                    "Layer": "Buildings",
+                    "SetProperties": { "Action": "MineSign {{i18n:Maps.LoadBearingFish}}" }
+                },
+                    //You can find the i18n strings containing your text in i18n/Default/Maps.json
+            ]
+        },
     ]
 }
