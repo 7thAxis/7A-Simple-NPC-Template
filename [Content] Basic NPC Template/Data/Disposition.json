@@ -1,3 +1,77 @@
 {
-    
+    //Disposition Wiki Page - https://stardewvalleywiki.com/Modding:NPC_data
+        "Changes": [
+            {
+                "LogName": "Load NPC Data",
+                "Action": "EditData",
+                "Target": "Data/Characters",
+                "Entries": {
+                    "TemplateNPC": {
+                            // If there isn't a comment, refer to the Wiki if you need further information
+                        "DisplayName": "{{i18n:Disposition.NPCName}}",
+                        "BirthSeason": "Fall",
+                        "BirthDay": 13,
+                        "HomeRegion": "Town",
+                        "Gender": "Female",
+                        "Age": "Adult",
+                        "Manner": "Rude",
+                        "SocialAnxiety": "Outgoing",
+                        "Optimism": "Neutral",
+                        "IsDarkSkinned": false, 
+                            // Awkwardly sets skintone. Only used for children.
+                        "CanBeRomanced": false, 
+                            // Can this NPC be romanced? Suggested to leave this off till you make substantial progress.
+                        "Calendar": "AlwaysShown",
+                        "SocialTab": "UnknownUntilMet",
+                        "CanSocialize": true, 
+                            // Enables social features (birthdays, friendship, gifts, etc)
+                        "CanReceiveGifts": true,
+                        "CanGreetNearbyCharacters": true, 
+                            // Speech bubbles over NPC's heads when near another one
+                        "CanVisitIsland": true, 
+                            // Can your NPC randomly visit ginger island?
+                        "IntroductionsQuest": true, 
+                            //Included in the initial introduction quest at the start of the save
+                        "ItemDeliveryQuests": true, 
+                            // Use of the quest board by Pierre's
+                        "PerfectionScore": true, 
+                            // Does this NPC have to be max friendship to reach perfection?
+                        "EndSlideShow": "MainGroup",
+                        "DumpsterDiveFriendshipEffect": -25, 
+                            // You can alter this to a positive number gain friendship instead
+                        "DumpsterDiveEmote": 12, 
+                            // Emote list - https://stardewvalleywiki.com/Modding:Event_data#Emotes
+                        "FlowerDanceCanDance": false, 
+                            // Can you dance with this NPC at the flower dance? Allows for platonic dancing
+                        "WinterStarParticipant": false, 
+                            // Included in the "Secret Santa". Make sure your NPC is accessible in the festival if set to true, or will cause a semi-softlock.
+                        "UnlockConditions": null, 
+                            // Condition for unlocking an NPC (https://stardewvalleywiki.com/Modding:Game_state_queries)
+                        "SpawnIfMissing": true, 
+                            // If for whatever reason the NPC fails to spawn, force them to spawn
+                        "Home": [
+                            {
+                                "Id": "Default",
+                                "Condition": null, 
+                                    //Condition for this spawn location being used by an NPC (https://stardewvalleywiki.com/Modding:Game_state_queries)
+                                "Location": "{{ModID}}_NPCHouse_Interior",
+                                    // Location loaded in Data/Maps.json
+                                "Tile": { "X": 4, "Y": 5 },
+                                "Direction": "down"
+                            }
+                        ],
+                        "Appearance": [],  
+                            // See Data/Appearance.json
+                        "Size": { "X": 16, "Y": 32 }, 
+                            // Dimensions of your NPC. For a first NPC, recommended to stick at 16x32 due to various game quirks.
+                        "Breather": true, 
+                            // That little distortion effect on an NPC's chest
+                        "ShakePortraits": [ 3, 7 ], 
+                            // Portraits indexes that have an intense vibration, usually on shocked and angry portraits
+                        "KissSpriteIndex": 16 
+                            // Slot reserved on tilesheet for smooches
+                    },
+                }
+            }
+    ]
 }

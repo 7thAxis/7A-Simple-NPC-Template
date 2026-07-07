@@ -1,9 +1,10 @@
 {
+    //Content Patcher includes wiki page - 
     "Changes": [
         {
             "LogName": "Import Data Files",
             "Action": "Include",
-            "FromFile": "Data/Maps.json"
+            "FromFile": "Data/Maps.json, Data/Appearance.json, Data/Disposition.json"
         }
     ]
 }
