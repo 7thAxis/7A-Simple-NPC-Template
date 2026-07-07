@@ -5,6 +5,17 @@
             "Action": "Load",
             "Target": "Portraits/TemplateNPC, Characters/TemplateNPC, Portraits/TemplateNPC_FlowerDance, Characters/TemplateNPC_FlowerDance",
             "FromFile": "Assets/{{TargetPathOnly}}/{{TargetWithoutPath}}.png"
+                // Do not load things individually if you can avoid it, you will drive yourself bonkers! Utilize target tokens! 
+                // These can load multiple assets at once, based on your file structure.
+
+                // EXAMPLE: Portraits/TemplateNPC
+
+                // Target            = Portraits/TemplateNPC
+                // TargetPathOnly    = Portraits
+                // TargetWithoutPath = Template NPC
+
+                // EXAMPLE: Assets/{{TargetPathOnly}}/{{TargetWithoutPath}}.png BECOMES Assets/Portraits/TemplateNPC.png
+                // Learn more about Target Tokens here - https://github.com/Pathoschild/StardewMods/blob/develop/ContentPatcher/docs/author-guide/tokens.md#field-references
         },
         {
             "LogName": "Load NPC Artwork - Alternate Version",
@@ -12,6 +23,33 @@
             "Target": "Portraits/TemplateNPC, Characters/TemplateNPC",
             "FromFile": "Assets/{{TargetPathOnly}}/Alternate/{{TargetWithoutPath}}.png",
             "When": { "AlternateNPCArt": true }
+                // This is a config token created in content.json
+                // Learn more about content patcher when conditions her - https://github.com/Pathoschild/StardewMods/blob/develop/ContentPatcher/docs/author-guide/tokens.md
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Priority": "Late",
+            "TargetField": [ "TemplateNPC" ],
+                //Change to your NPC's ID
+            "Entries": {
+                "Appearance": [
+                {
+                    "ID": "Default",
+                    "Portrait": "Portraits/TemplateNPC",
+                    "Sprite": "Characters/TemplateNPC"
+                        // These assets were loaded in "Load NPC Artwork"
+                },
+                {
+                    "ID": "Flower Dance",
+                    "Condition": "IS_EVENT festival_spring24",
+                        // Condition for this outfit to appear
+                        // Utilizes GSQs: https://stardewvalleywiki.com/Modding:Game_state_queries
+                    "Portrait": "Portraits/TemplateNPC_FlowerDance",
+                    "Sprite": "Characters/TemplateNPC_FlowerDance"
+                },       
+                ]
+            }
         }
     ]
 }
