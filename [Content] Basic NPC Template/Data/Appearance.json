@@ -1,5 +1,7 @@
 {
     "Changes": [
+            // Content Patcher asset loading documentation - https://github.com/Pathoschild/StardewMods/blob/develop/ContentPatcher/docs/author-guide/action-load.md
+            // Content Patcher edit image documentation - https://github.com/Pathoschild/StardewMods/blob/develop/ContentPatcher/docs/author-guide/action-editimage.md
         {
             "LogName": "Load NPC Artwork",
             "Action": "Load",
@@ -24,7 +26,7 @@
             "FromFile": "Assets/{{TargetPathOnly}}/Alternate/{{TargetWithoutPath}}.png",
             "When": { "AlternateNPCArt": true }
                 // This is a config token created in content.json
-                // Learn more about content patcher when conditions her - https://github.com/Pathoschild/StardewMods/blob/develop/ContentPatcher/docs/author-guide/tokens.md
+                // Learn more about content patcher when conditions here - https://github.com/Pathoschild/StardewMods/blob/develop/ContentPatcher/docs/author-guide/tokens.md
         },
         {
             "Action": "EditData",
