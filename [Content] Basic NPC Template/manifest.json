@@ -1,0 +1,31 @@
+{
+
+    //Manifest Wiki Page - https://stardewvalleywiki.com/Modding:Modder_Guide/APIs/Manifest
+
+	"Name": "7A Simple NPC Template",
+	"Author": "7thAxis",
+	"Version": "1.0.0-alpha",
+        // General syntax for version numbers: MajorVersion.ContentUpdates.Bugfixes
+        // Alpha - Mod is in development, Beta - Mod is in release testing, Hotfix - Emergency bug fix
+        // Change/remove -alpha as you make progress
+	"Description": "Template for a simple NPC by 7thAxis.",
+	"UniqueID": "7thAxis.NPCTemplate", 
+        // Change this to an ID unique to you.
+        // When you see {{ModID}}, this ID will be passed into it.s
+	"UpdateKeys": ["Nexus:???"], 
+        // This will be your update key on nexus. 
+        // https://www.nexusmods.com/stardewvalley/mods/THISNUMBERHERE. 
+        // You can get your number without releasing a mod, all you need to do is create an unpublished page.
+	"MinimumGameVersion": "1.6",
+	"ContentPackFor": { "UniqueID": "Pathoschild.ContentPatcher" },
+    /*
+        // If your mod requires a framework, remove the commenting and paste it into ModIDHere. 
+        // Delete extras you don't need, this was to show formatting.
+
+    "Dependencies": [
+        { "UniqueID": "ModIDHere1" },
+        { "UniqueID": "ModIDHere2" },
+        { "UniqueID": "ModIDHere3" }
+    ]
+    */
+}

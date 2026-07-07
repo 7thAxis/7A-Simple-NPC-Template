@@ -1,12 +1,10 @@
 {
     "Changes": [
         {
-            "LogName": "",
+            "LogName": "NPC Dialogue",
             "Action": "EditData",
-            "Target": "characters/dialogue/npc",
+            "Target": "Characters/Dialogue/TestNPC",
             "Entries": {
-
-                "Introduction": "",
 
                 //BASIC KEYS
                 "Mon": "",
@@ -18,43 +16,9 @@
                 "Sun": "",
 
                 "Mon2": "",
-                "Tue2": "",
-                "Wed2": "",
-                "Thu2": "",
-                "Fri2": "",
-                "Sat2": "",
-                "Sun2": "",
-
-                "Mon4": "",
                 "Tue4": "",
-                "Wed4": "",
-                "Thu4": "",
-                "Fri4": "",
-                "Sat4": "",
-                "Sun4": "",
-
-                "Mon6": "",
-                "Tue6": "",
                 "Wed6": "",
-                "Thu6": "",
-                "Fri6": "",
-                "Sat6": "",
-                "Sun6": "",
-
-                "Mon8": "",
-                "Tue8": "",
-                "Wed8": "",
-                "Thu8": "",
                 "Fri8": "",
-                "Sat8": "",
-                "Sun8": "",
-
-                "Mon10": "",
-                "Tue10": "",
-                "Wed10": "",
-                "Thu10": "",
-                "Fri10": "",
-                "Sat10": "",
                 "Sun10": "",
 
                 //BASIC SEASON KEYS
@@ -63,7 +27,6 @@
                 "fall_Tue": "",
                 "winter_Sat": "",
 
-                
                 //SEASONAL HEART LEVEL KEYS
                 "spring_Mon2": "",
                 "summer_Tue4": "",
@@ -93,6 +56,7 @@
                 "Resort_Beach": "",
 
                 //CONVERSATION TOPICS (event responses)
+                "Introduction": "",
                 "cc_Begin": "",
                 "cc_Complete": "",
 
@@ -100,7 +64,6 @@
                 "MovieInvitation": "",
                 "RejectMovieTicket_AlreadyInvitedBySomeoneElse": "",
                 "RejectMovieTicket_AlreadyWatchedThisWeek": "",
-                "RejectMovieTicket_Divorced": "",
                 "RejectMovieTicket_DontWantToSeeThatMovie": "",
                 "RejectMovieTicket": "",
 
@@ -126,33 +89,7 @@
                 //REJECTION
                 "RejectItem_<id>": "",
                 "RejectItem_<tag>": "",
-                
-                //BOUQUET RESPONSES
-                "AcceptBouquet": "",
-                "RejectBouquet_NotDatable": "",
-                "RejectBouquet_NpcAlreadyMarried": "",
-                "RejectBouquet_AlreadyAccepted_Engaged": "",
-                "RejectBouquet_AlreadyAccepted_Married": "",
-                "RejectBouquet_AlreadyAccepted": "",
-                "RejectBouquet_Divorced": "",
-                "RejectBouquet_VeryLowHearts": "",
-                "RejectBouquet_LowHearts": "",
                 "RejectBouquet": "",
-                "RejectGift_Divorced": "",
-
-                //PENDANT RESPONSES
-                //"give_pendant": "", As a workaround, add <NPCInternalName>_Engaged as an entry to Strings/StringsFromCSFiles instead. 
-                "RejectMermaidPendant_AlreadyAccepted_Engaged": "",
-                "RejectMermaidPendant_AlreadyAccepted_Married": "",
-                "RejectMermaidPendant_AlreadyAccepted": "",
-                "RejectMermaidPendant_Divorced": "",
-                "RejectMermaidPendant_NeedHouseUpgrade": "",
-                "RejectMermaidPendant_NotDatable": "",
-                "RejectMermaidPendant_NpcWithSomeoneElse": "",
-                "RejectMermaidPendant_PlayerWithSomeoneElse": "",
-                "RejectMermaidPendant_Under8Hearts": "",
-                "RejectMermaidPendant_Under10Hearts": "",
-                "RejectMermaidPendant_Under10Hearts_AskedAgain": "",
                 "RejectMermaidPendant": "",
 
                 //MISC RESPONSES

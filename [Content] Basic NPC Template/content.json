@@ -1,0 +1,22 @@
+{
+    "Format": "2.6.0",
+    //"ConfigSchema": {},
+    //"DynamicTokens": {},
+    "Changes": [
+        {
+            "LogName": "Import File Loader",
+            "Action": "Include",
+            "FromFile": "Loaders/File_Loader.json"
+        }
+        // This will load the file (Data/Loaders/File_Loader.json) that contains all data loading.
+        // You can technically put them here in content.json, but as mods get larger it gets unruly.
+        // As such, I've found moving data importing into its own file to be less overwhelming.
+    ]
+
+    //ADD HELPFUL COMMANDS IN RESOURCES
+    //ADD LINK TO BUTTON JSON LEARNER
+    //ADD TOOL KIT LIST
+    //Stardew Syntax extension
+    //json with comments
+    //useful framework list
+}

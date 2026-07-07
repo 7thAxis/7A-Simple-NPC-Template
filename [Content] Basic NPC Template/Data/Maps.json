@@ -1,0 +1,43 @@
+{
+    // Tiled Map Editor - https://www.mapeditor.org/
+    // Map Wiki Page - https://stardewvalleywiki.com/Modding:Maps
+    // Locations Wiki Page - https://stardewvalleywiki.com/Modding:Location_data
+    // EditMap Content Patcher Docs - https://github.com/Pathoschild/StardewMods/blob/develop/ContentPatcher/docs/author-guide/action-editmap.md
+
+    "Changes": [
+
+//LOAD TILESHEETS
+    // This is where you will load the texture for your house. 
+    // You can leave the tilesheet directly in the maps folder unloaded, but it's advised to load the tilesheet.
+    // If the tilesheet is loaded it is easier for both you and other authors to access the sheet.
+        {
+            "LogName": "Patch Exterior Map",
+            "Action": "Load",
+            "Target": "Maps/NPCHouse",
+                // Change NPCHouse to something unique to avoid texture mod conflicts, such as ModID_NPCHouse
+                // You will need to change it inside the map as well.
+                // You can do this by editing the map in Tiled or opening it in your code editor.
+            "FromFile": "Assets/Tilesheets/NPCHouse.png"
+        },
+//LOAD INTERIOR MAP & CREATE LOCATION
+
+//PATCH IN EXTERIOR MAP
+        {
+            "LogName": "Patch Exterior Map",
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "PatchMode": "Replace",
+            "FromFile": "Assets/Maps/NPCHouse_Exterior.tmx",
+            "ToArea": { "X": 25, "Y": 61, "Width": 8, "Height": 10 }
+                // X & Y will be the TOP LEFT coordinate of where you want to place your map patch.
+                // (x,y)*_________
+                //      |         |
+                //      |         |
+                //      |_________|
+                // Use either Tiled out of game or Debug Mode in-game to find these coords.
+                // Width and Height are the number of tiles your along the top and side of the map patch.
+                // Easiest way to figure that out is to count in tiled.
+        }
+//WARPS & TEXT STRINGS
+    ]
+}
