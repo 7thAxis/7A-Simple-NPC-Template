@@ -57,8 +57,8 @@
                     "MusicDefault": "fieldofficeTentMusic",
                         // Delete this if you want to use normal over-world music
                         // For finding in-game tracks, I recommend using Soundboard (https://www.nexusmods.com/stardewvalley/mods/34968)
-                    "DisplayName": "{{i18n:Maps.NPCHouse.Music}}",
-                        // Connects to "i18n" in the root folder of your mod.
+                    "DisplayName": "{{i18n:Maps.NPCHouse}}",
+                        // String connects to "i18n/Default/Maps.json"
                     "DefaultArrivalTile": { "X": 3, "Y": 10 },
                         // This tile is primarily used for debugging, such as when you warp. 
                         // Warps are typically handled by map properties, not this.
