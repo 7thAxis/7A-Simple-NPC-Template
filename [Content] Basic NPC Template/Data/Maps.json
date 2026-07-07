@@ -73,6 +73,7 @@
 //WARPS
     // NOTE: You can do these actions inside of Tiled Map Editor itself.
     // However doing it within content patcher gives you more fine-tuned control and I personally find it easier to edit.
+    // If you handle it inside the map itself, feel free to ignore this section and the next.
         {
             "LogName": "Add warp OUT OF House Interior",
             "Action": "EditMap",
