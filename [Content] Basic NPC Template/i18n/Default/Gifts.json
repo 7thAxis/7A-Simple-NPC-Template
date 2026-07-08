@@ -1,0 +1,23 @@
+{
+    "GiftReaction.Love": "Hey, I love this item!$h",
+    "GiftReaction.Like": "I like this a lot!$h",
+    "GiftReaction.Dislike": "Um... thanks?$s",
+    "GiftReaction.Hate": "Why do you think I'd want this?$a",
+    "GiftReaction.Neutral": "This is neat!",
+
+    "Gifts.Pufferfish.Birthday": "Um. Ew... This is kinda... uh, never mind.#$b#Thanks for the birthday gift.$s",
+    "Gifts.BoneItems.Birthday": "Why would you give me bones for my birthday?! Icky!$u",
+    "Gifts.Loved.Birthday": "Yay! This is the best birthday present ever!",
+    "Gifts.Hated.Birthday": "Uhg! This is the worst! And on my birthday too?!$a",
+    "Gifts.Negative.Birthday": "This isn't the best gift ever... and on my birthday...$s",
+    "Gifts.Positive.Birthday": "Wow! A birthday present? Thank you! This is great!$h",
+    "Gifts.Fallback.Birthday": "Thanks for the present!$h",
+
+    "Gifts.Pufferfish": "Um... This won't poison me, will it?",
+    "Gifts.BoneItems": "Ew! Bones! Get them away!$u",
+
+    "Gifts.Anchovy.Reject": "Ew! Stinky fish! Get it away!$a",
+    "Gifts.Pickles.Reject": "Yucky. Pickles yuck. No thank you.$s",
+    "Gifts.Bouquet.Reject": "Huh! No!!! I'm a ducky!!!$u",
+    "Gifts.Pendant.Reject": "You can't marry a ducky, you weirdo.$a"
+}

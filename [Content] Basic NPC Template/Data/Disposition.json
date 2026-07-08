@@ -8,7 +8,7 @@
                 "Entries": {
                     "TemplateNPC": {
                             // If there isn't a comment, refer to the Wiki if you need further information
-                        "DisplayName": "{{i18n:Disposition.NPCName}}",
+                        "DisplayName": "{{i18n:Misc.NPCName}}",
                         "BirthSeason": "Fall",
                         "BirthDay": 13,
                         "HomeRegion": "Town",

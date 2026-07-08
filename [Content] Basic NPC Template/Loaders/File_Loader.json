@@ -2,9 +2,15 @@
     //Content Patcher includes wiki page - 
     "Changes": [
         {
+            "LogName": "Load Placeholder File",
+            "Action": "Load",
+            "Target": "Characters/Dialogue/TemplateNPC",
+            "FromFile": "Loaders/Blank.json"
+        },
+        {
             "LogName": "Import Data Files",
             "Action": "Include",
-            "FromFile": "Data/Maps.json, Data/Appearance.json, Data/Disposition.json"
+            "FromFile": "Data/Maps.json, Data/Appearance.json, Data/Disposition.json, Data/Gifts.json"
         }
     ]
 }

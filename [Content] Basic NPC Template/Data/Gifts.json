@@ -1,0 +1,87 @@
+{
+    "Changes": [
+    
+    // Gift Taste Data documentation - https://stardewvalleywiki.com/Modding:Gift_taste_data
+    
+    //  ~NOTE~
+    // I use a method that makes NPC gift taste data more readable. 
+    // It sets the gift taste string to be full of empty values, then patches into each of their indexes in a list rather than run-on-sentence-thing.
+    // (View Wiki link above to see what I mean)
+    // This will likely become obsolete in the future, but i'll edit the template at that time. 
+
+       {
+            "LogName": "Gift Tastes - Patch Empty Data",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "Entries": { "TemplateNPC": "//////////" }
+        },
+        {
+            "LogName": "Gift Tastes - Insert Data",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "Fields": {
+                "TemplateNPC": {
+                    //Love
+                    "0": "{{i18n:GiftReaction.Love}}",
+                        // Even numbers inside "#" are dialogue reactions to gifts, labeled for your convenience.
+                        // You can edit these dialogue strings in "i18n/Default/Gifts.json
+                    "1": "book_item color_red -5 192",
+                        // The even numbers are item IDs. Find vanilla item IDs here: https://mateusaquino.github.io/stardewids/
+                        // You can also list context tags: https://stardewvalleywiki.com/Modding:Context_tags
+                        // As well as categories: https://stardewvalleywiki.com/Modding:Items#Categories
+                        // This list has the NPC love all books, all red colored items, all egg category items and potatoes
+
+                    //Like
+                    "2": "{{i18n:GiftReaction.Like}}",
+                    "3": "jelly_item 167 203",
+
+                    //Dislike
+                    "4": "{{i18n:GiftReaction.Dislike}}",
+                    "5": "bone_item -6 200",
+
+                    //Hate
+                    "6": "{{i18n:GiftReaction.Hate}}",
+                    "7": "pickle_item -4 206 767",
+
+                    //Neutral
+                    "8": "{{i18n:GiftReaction.Neutral}}",
+                    "9": "769 815 459 447"
+                }
+            }
+        },
+    //SPECIFIC GIFT DIALOGUE
+        // NPCs can react to specific items in various different ways.
+        // They can react to groups of items, specific items, reject items, if it's a birthday item, etc.
+        // You can edit these reactions in "i18n/Default/Gifts.json"
+        // SDV Dialogue Wiki - https://stardewvalleywiki.com/Modding:Dialogue
+        {
+            "LogName": "NPC Specific Gift Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/TemplateNPC",
+            "Entries": {
+
+                //BIRTHDAY GIFTS
+                "AcceptBirthdayGift_(O)128": "{{i18n:Gifts.Pufferfish.Birthday}}",
+                    // This is the format for item IDs (https://mateusaquino.github.io/stardewids/)
+                "AcceptBirthdayGift_bone_item": "{{i18n:Gifts.BoneItems.Birthday}}",
+                    // This is the format for context tags (https://stardewvalleywiki.com/Modding:Context_tags)
+                "AcceptBirthdayGift_Loved": "{{i18n:Gifts.Loved.Birthday}}",
+                "AcceptBirthdayGift_Hated": "{{i18n:Gifts.Hated.Birthday}}",
+                "AcceptBirthdayGift_Negative": "{{i18n:Gifts.Negative.Birthday}}",
+                "AcceptBirthdayGift_Positive": "{{i18n:Gifts.Positive.Birthday}}",
+                "AcceptBirthdayGift": "{{i18n:Gifts.Fallback.Birthday}}",
+
+                //UNIQUE GIFT RESPONSES
+                "AcceptGift_(O)128": "{{i18n:Gifts.Pufferfish}}",
+                "AcceptGift_bone_item": "{{i18n:Gifts.BoneItems}}",
+
+                //REJECTION
+                    //NPCs that reject items will not take them. They will remain in your inventory.
+                "RejectItem_(O)129": "{{i18n:Gifts.Anchovy.Reject}}",
+                "RejectItem_pickle_item": "{{i18n:Gifts.Pickles.Reject}}",
+                "RejectBouquet": "{{i18n:Gifts.Bouquet.Reject}}",
+                "RejectMermaidPendant": "{{i18n:Gifts.Pendant.Reject}}"
+            }
+        }
+    ]
+}

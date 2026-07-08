@@ -3,7 +3,7 @@
         {
             "LogName": "NPC Dialogue",
             "Action": "EditData",
-            "Target": "Characters/Dialogue/TestNPC",
+            "Target": "Characters/Dialogue/TemplateNPC",
             "Entries": {
 
                 //BASIC KEYS
@@ -66,31 +66,6 @@
                 "RejectMovieTicket_AlreadyWatchedThisWeek": "",
                 "RejectMovieTicket_DontWantToSeeThatMovie": "",
                 "RejectMovieTicket": "",
-
-                //BIRTHDAY GIFTS
-                "AcceptBirthdayGift_<id>": "",
-                "AcceptBirthdayGift_<tag>": "",
-                "AcceptBirthdayGift_<taste>": "",
-                "AcceptBirthdayGift_Negative": "",
-                "AcceptBirthdayGift_Positive": "",
-                "AcceptBirthdayGift": "",
-
-                //UNIQUE GIFT RESPONSES
-                "AcceptGift_<id>": "",
-                "AcceptGift_<tag>": "",
-                "AcceptGift_<taste>_<context tag>": "",
-                "AcceptGift": "",
-                "AcceptGift_Loved": "",
-                "AcceptGift_Liked": "",
-                "AcceptGift_Neutral": "",
-                "AcceptGift_Disliked": "",
-                "AcceptGift_Hated": "",
-
-                //REJECTION
-                "RejectItem_<id>": "",
-                "RejectItem_<tag>": "",
-                "RejectBouquet": "",
-                "RejectMermaidPendant": "",
 
                 //MISC RESPONSES
                 "GreenRain": "",
