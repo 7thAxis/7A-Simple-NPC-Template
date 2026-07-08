@@ -63,7 +63,7 @@
                         // This tile is primarily used for debugging, such as when you warp. 
                         // Warps are typically handled by map properties, not this.
                         // The command to test will be debug warp YOURMODID_NPCHouse_Interior (or whatever you change it to)
-                    "CreateOnLoad": { "MapPath": "Maps/NPCHouse_Interior" },
+                    "CreateOnLoad": { "MapPath": "Maps/NPCHouse_Interior" }
                         // This map is the one you loaded in "Load Interior Map"
                         // DO NOT use a file path from your assets folder. 
                         // The game is looking for the map you already loaded in.
@@ -126,9 +126,9 @@
                     "Position": { "X": 9, "Y": 4 },
                     "Layer": "Buildings",
                     "SetProperties": { "Action": "MineSign {{i18n:Maps.LoadBearingFish}}" }
-                },
+                }
                     //You can find the i18n strings containing your text in i18n/Default/Maps.json
             ]
-        },
+        }
     ]
 }
