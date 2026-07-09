@@ -22,8 +22,8 @@
         // #$b# - Waits for you to click the current dialogue box for the next to appear. Good for preventing run-on dialogue boxes.
         // #$e# - Stops the dialogue, making you have to click the NPC again to continue. Good for letting your NPC ramble, but not trap the player.
 
-  "Dialogue.Fri": "$query WEATHER Rain#A Rainy Friday, yuck...|This is an example of a conditional dialogue. This is the text that displays when it's false! In this case, it is not raining this friday.",
-  "Dialogue.Sat": "This is an example of a simple question.#$b# $y 'Yes_You said yes!_No_You said no!_Maybe_You said maybe!'",
+  "Dialogue.Fri": "$query WEATHER Here Rain#A Rainy Friday, yuck...|This is an example of a conditional dialogue. This is the text that displays when it's false! In this case, it is not raining this friday.",
+  "Dialogue.Sat": "This is an example of a simple question.#$b#$y 'Is this cool?_Yes_You said yes!_No_You said no!_Maybe_You said maybe!'",
   "Dialogue.Sun": "This is an example of a dialogue that gives you an item![270]#$b#This is an example of a dialogue that gives you an item with more specifics. Specifically 10 silver star corn.#$action AddItem 270 10 1",
 
     // This example includes an action command, which allows you to preform a whole array of behaviors following a dialogue.

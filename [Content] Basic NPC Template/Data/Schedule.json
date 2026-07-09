@@ -18,17 +18,41 @@
                     //  https://marketplace.visualstudio.com/items?itemName=linkoid.stardew-syntax
 
             // Always set a spring schedule for your NPC. This is the fallback schedule if for whatever reason a schedule fails.
-
+            // Here are a few example keys and schedules:
                 "spring": "
 
                     630 {{ModID}}_NPCHouse_Interior 2 5 3/
                     700 7 9 0/
                     900 Town 31 69 2/
                     1200 BusStop 25 10 2/
-                    1500 {{ModID}}_NPCHouse_Interior 2 5 TemplateNPC_walkinplace/
-                    2000 {{ModID}}_NPCHouse_Interior 1 6 TemplateNPC_sleep/
+                    1500 {{ModID}}_NPCHouse_Interior 2 5 TemplateNPC_spininplace/
+                    2000 1 6 TemplateNPC_sleep/
 
 				",
+                "rain": "
+
+                    630 {{ModID}}_NPCHouse_Interior 2 5 3/
+                    900 2 5 TemplateNPC_spininplace/
+                    2000 1 6 TemplateNPC_sleep/
+
+				",
+                "Mon": "
+
+                    630 {{ModID}}_NPCHouse_Interior 2 5 3/
+                    800 Town 31 69 2/
+                    1500 {{ModID}}_NPCHouse_Interior 2 5 TemplateNPC_spininplace/
+                    2000 1 6 TemplateNPC_sleep/
+
+				",
+                "Fri": "
+
+                    0 Town 31 69 2/
+                    800 BusStop 25 10 2/
+                    1000 {{ModID}}_NPCHouse_Interior 2 5 TemplateNPC_spininplace/
+                    1500 1 6 TemplateNPC_sleep/
+
+				",
+
             //Helpful stuff:
                 // Facing Direction (defaults to down if no value is entered)
                     // 0 - up
@@ -37,10 +61,12 @@
                     // 3 - left
                 // Warping schedules/0 Schedules
                     // 0 schedules will warp your NPC to a specific spot when the day loads.
-                    // See "BLAH" for an example.
+                    // See "Fri" for an example.
                     // This makes it easier for an NPC to get to a far away place without having to walk all the way there.
                     // These only work on day start
+                    // These schedules ignore your NPC's home spawning position
                 // Don't start your schedule at 600, there is a decent chance it will break. Start at 610 minimum.
+                // Always have your first schedule position near the home location set in "Data/Disposition.json", unless using a 0 schedule.
                 // Things will get weird if your coordinates are too far away for an NPC to reach in time
                 // NPCs can go in 1 building tile before their pathing explodes. You can use this to make NPCs sit on benches via animations.
                 // Animations that end in _sleep have hardcoded sleeping behavior
@@ -48,16 +74,22 @@
                     // Create a napping animation if you want you NPC to sleep during the day and get back up.
                 // If your schedule stops working during testing, try reloading the game. They're so finicky.
             },
+        },
+        {
+            "LogName": "Define Schedule Animations",
+            "Action": "EditData",
+            "Target": "Data/animationdescriptions",
+            "Entries": {
+            // Animations utilize the frame #s from your sprite sheet.
+            // Utilize the base provided to determine frame numbers
+            // The format is - transition into animation frames/animation loop/transition out of animation frames
+            // You can specify a single frame for each to make the animation "Static"
+            // Utilize these in your schedules (see examples in schedules)
+                "TemplateNPC_sleep": "17/17/17",
+                "TemplateNPC_spininplace": "0 1 2 3/0 4 8 12/3 2 1 0",
+            }
         }
-    ]
-    {
-        "LogName": "Define Schedule Animations",
-        "Action": "EditData",
-        "Target": "Data/animationdescriptions",
-        "Entries": {
-            "TemplateNPC_sleep": "17/17/17",
-            "TemplateNPC_walkinplace": "0 4 8 12/0 1 2 3/12 8 4 0",
-        }
-    }
+  ]
 }
+
     
