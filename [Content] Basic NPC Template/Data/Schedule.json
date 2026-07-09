@@ -1,3 +1,63 @@
 {
-    
+    // Schedules Wiki Page - https://stardewvalleywiki.com/Modding:Schedule_data
+
+    "Changes": [
+        {
+            "LogName": "Load NPC Schedule",
+            "Action": "EditData",
+            "Target": "Characters/Schedules/TemplateNPC",
+            "Entries": {
+
+            // NPCs use schedules to move around. Modders set coordinates and the game will automatically pathfind the NPC at the correct time.
+            // Schedules are FINICKY and a pain to test. 
+                // I recommend the mod Turbo to speed up the process: https://www.nexusmods.com/stardewvalley/mods/23835
+                // Typical format: Time Location X Y FacingDirection/Animation
+                // If your NPC doesn't leave the map when moving to their next coordinate, you can exclude the location
+                // Schedules can either be a single string or break-lined like below. I prefer break-lined so I don't lose my mind.
+                // If your editor screams about break-lining and you are using Visual Studio Code, use this extension: 
+                    //  https://marketplace.visualstudio.com/items?itemName=linkoid.stardew-syntax
+
+            // Always set a spring schedule for your NPC. This is the fallback schedule if for whatever reason a schedule fails.
+
+                "spring": "
+
+                    630 {{ModID}}_NPCHouse_Interior 2 5 3/
+                    700 7 9 0/
+                    900 Town 31 69 2/
+                    1200 BusStop 25 10 2/
+                    1500 {{ModID}}_NPCHouse_Interior 2 5 TemplateNPC_walkinplace/
+                    2000 {{ModID}}_NPCHouse_Interior 1 6 TemplateNPC_sleep/
+
+				",
+            //Helpful stuff:
+                // Facing Direction (defaults to down if no value is entered)
+                    // 0 - up
+                    // 1 - right
+                    // 2 - down
+                    // 3 - left
+                // Warping schedules/0 Schedules
+                    // 0 schedules will warp your NPC to a specific spot when the day loads.
+                    // See "BLAH" for an example.
+                    // This makes it easier for an NPC to get to a far away place without having to walk all the way there.
+                    // These only work on day start
+                // Don't start your schedule at 600, there is a decent chance it will break. Start at 610 minimum.
+                // Things will get weird if your coordinates are too far away for an NPC to reach in time
+                // NPCs can go in 1 building tile before their pathing explodes. You can use this to make NPCs sit on benches via animations.
+                // Animations that end in _sleep have hardcoded sleeping behavior
+                    // Once this is used for the day, your NPC will not wake back up
+                    // Create a napping animation if you want you NPC to sleep during the day and get back up.
+                // If your schedule stops working during testing, try reloading the game. They're so finicky.
+            },
+        }
+    ]
+    {
+        "LogName": "Define Schedule Animations",
+        "Action": "EditData",
+        "Target": "Data/animationdescriptions",
+        "Entries": {
+            "TemplateNPC_sleep": "17/17/17",
+            "TemplateNPC_walkinplace": "0 4 8 12/0 1 2 3/12 8 4 0",
+        }
+    }
 }
+    

@@ -78,8 +78,8 @@
                     // If you speciify JUST a location, it will cover the entire map.
                     // if you specify an x,y coordinate, it will only cover that tile.
 
-                "BusStop": "{{i18n:Dialogue.TownDialogue}}",
-                "Town_3_10": "{{i18n:Dialogue.OutsideHouse}}",
+                "BusStop": "{{i18n:Dialogue.BusStopDialogue}}",
+                "Town_31_69": "{{i18n:Dialogue.OutsideHouse}}",
 
                 //CONVERSATION TOPICS (event responses)
 
