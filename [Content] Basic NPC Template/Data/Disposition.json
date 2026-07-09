@@ -28,7 +28,7 @@
                         "CanReceiveGifts": true,
                         "CanGreetNearbyCharacters": true, 
                             // Speech bubbles over NPC's heads when near another one
-                        "CanVisitIsland": true, 
+                        "CanVisitIsland": false, 
                             // Can your NPC randomly visit ginger island?
                         "IntroductionsQuest": true, 
                             //Included in the initial introduction quest at the start of the save

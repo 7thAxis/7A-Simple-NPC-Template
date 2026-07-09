@@ -1,5 +1,11 @@
 {
     "Changes": [
+
+        // Dialogue wiki page: https://stardewvalleywiki.com/Modding:Dialogue
+        // i18n documentation page: 
+            // You can also read my i18n tutorial in "i18n/Default/!README.json"
+        //  REMEMBER TO LOAD YOUR BLANK.JSON! See "Loaders/File_Loader.json" for more information.
+
         {
             "LogName": "NPC Dialogue",
             "Action": "EditData",
@@ -7,73 +13,94 @@
             "Entries": {
 
                 //BASIC KEYS
-                "Mon": "",
-                "Tue": "",
-                "Wed": "",
-                "Thu": "",
-                "Fri": "",
-                "Sat": "",
-                "Sun": "",
+                    
+                    // These are the lowest priority daily keys, weekday keys.
+                    // They most use the three letter format, EX: "Monday" will not work.
 
-                "Mon2": "",
-                "Tue4": "",
-                "Wed6": "",
-                "Fri8": "",
-                "Sun10": "",
+                "Mon": "{{i18n:Dialogue.Mon}}",
+                "Tue": "{{i18n:Dialogue.Tue}}",
+                "Wed": "{{i18n:Dialogue.Wed}}",
+                "Thu": "{{i18n:Dialogue.Thu}}",
+                "Fri": "{{i18n:Dialogue.Fri}}",
+                "Sat": "{{i18n:Dialogue.Sat}}",
+                "Sun": "{{i18n:Dialogue.Sun}}",
+
+                //DAY HEART-LEVEL KEYS
+
+                    // These are keys that will appear on certain days of the week at specific heart levels
+                    // Format: WeekdayHeartLevel
+
+                "Mon2": "{{i18n:Dialogue.Mon2}}",
+                "Tue4": "{{i18n:Dialogue.Tue4}}",
+                "Wed6": "{{i18n:Dialogue.Wed6}}",
+                "Fri8": "{{i18n:Dialogue.Fri8}}",
+                "Sun10": "{{i18n:Dialogue.Sun10}}",
 
                 //BASIC SEASON KEYS
-                "spring_Mon": "",
-                "summer_Fri": "",
-                "fall_Tue": "",
-                "winter_Sat": "",
+
+                    // These are keys that will fire on specific days of he week but only during the specified season
+                    // Format: season_Weekday
+
+                "spring_Mon": "{{i18n:Dialogue.MonSpring}}",
+                "summer_Fri": "{{i18n:Dialogue.FriSummer}}",
+                "fall_Tue": "{{i18n:Dialogue.TueFall}}",
+                "winter_Sat": "{{i18n:Dialogue.SatWinter}}",
 
                 //SEASONAL HEART LEVEL KEYS
-                "spring_Mon2": "",
-                "summer_Tue4": "",
-                "fall_Fri6": "",
-                "winter_Wed10": "",
+
+                    // These are highly specific keys that trigger during the specified season, on a specific day at a specific heart level.
+                    // These keys many mod authors will completely cover for more fleshed out dialogue, but do not obligate yourself to do so.
+                    // Format: season_WeekdayHeartLevel
+
+                "spring_Mon2": "{{i18n:Dialogue.MonSpring2}}",
+                "summer_Tue4": "{{i18n:Dialogue.SummerTue4}}",
+                "fall_Fri6": "{{i18n:Dialogue.FallFri6}}",
+                "winter_Wed10": "{{i18n:Dialogue.WinterWed10}}",
 
                 //SPECIFIC DAY KEYS
-                "spring_<day>": "",
-                "summer_<day>": "",
-                "fall_<day>": "",
-                "winter_<day>": "",
-                "spring_<day>_<year>": "",
-                "summer_<day>_<year>": "",
-                "fall_<day>_<year>": "",
-                "winter_<day>_<year>": "",
+                    // These are keys that will fire on specific days of the year.
+                    // They are not as straight forward as they appear, so I'll explain.
+                    // There are 2 keys: Season_Day and Season_Day_Year
+                    // Season_Day will ONLY appear in year 1. After year 1 it will never appear again.
+                    // Season_Day_Year will appear every year after year 1.
 
-                //FLOWER DANCE
-                "AcceptedFlowerDance": "",
-                "RejectedFlowerDance": "",
+                "spring_1": "{{i18n:Dialogue.SpringDay1}}",
+                "winter_25_2": "{{i18n:Dialogue.WinterDay25Year2}}",
 
-                //RESORT
-                "Resort": "",
-                "Resort_Entering": "",
-                "Resort_Leaving": "",
-                "Resort_Shore": "",
-                "Resort_Bar": "",
-                "Resort_Beach": "",
+                //FLOWER DANCE 
+                    // Only used if "FlowerDanceCanDance" is set to true in "Data/Disposition.json" 
+                "AcceptedFlowerDance": "{{i18n:Dialogue.FlowerDanceAccept}}",
+                "RejectedFlowerDance": "{{i18n:Dialogue.FlowerDanceReject}}",
+
+                //LOCATION
+
+                    // These keys fire specifically if an NPC is in a certain location.
+                    // If you speciify JUST a location, it will cover the entire map.
+                    // if you specify an x,y coordinate, it will only cover that tile.
+
+                "BusStop": "{{i18n:Dialogue.TownDialogue}}",
+                "Town_3_10": "{{i18n:Dialogue.OutsideHouse}}",
 
                 //CONVERSATION TOPICS (event responses)
-                "Introduction": "",
-                "cc_Begin": "",
-                "cc_Complete": "",
 
-                //MOVIES
-                "MovieInvitation": "",
-                "RejectMovieTicket_AlreadyInvitedBySomeoneElse": "",
-                "RejectMovieTicket_AlreadyWatchedThisWeek": "",
-                "RejectMovieTicket_DontWantToSeeThatMovie": "",
-                "RejectMovieTicket": "",
+                    // These keys are a couple example conversation topics.
+                    // Typically, these fire for a few days after an event or the completion of an important task.
+                    // Find a list of vanilla CTs here: https://stardewvalleywiki.com/Modding:Dialogue#Conversation_topics
+
+                "Introduction": "{{i18n:Dialogue.Introduction}}",
+                "cc_Begin": "{{i18n:Dialogue.StartCommunityCenter}}",
+                "cc_Complete": "{{i18n:Dialogue.FinishCommunityCenter}}",
 
                 //MISC RESPONSES
-                "GreenRain": "",
-                "GreenRain_2": "",
-                "<location>": "",
-                "<location_X_Y>": "",
-                "Town_DumpsterDiveComment": "",
-                "HitBySlingshot": ""
+
+                    // These are miscellaneous keys that should be self explanatory.
+                    // GreenRain only appears on year 1.
+
+                "GreenRain": "{{i18n:Dialogue.GreenRain}}",
+                "GreenRain_2": "{{i18n:Dialogue.GreenRainYear2}}",
+                "Town_DumpsterDiveComment": "{{i18n:Dialogue.DumpsterDiveComment}}",
+                "HitBySlingshot": "{{i18n:Dialogue.HitBySlingShot}}"
+
             }
         }
     ]

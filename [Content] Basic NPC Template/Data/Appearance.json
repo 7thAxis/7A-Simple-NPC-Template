@@ -56,7 +56,7 @@
                         // Utilizes GSQs: https://stardewvalleywiki.com/Modding:Game_state_queries
                     "Portrait": "Portraits/TemplateNPC_FlowerDance",
                     "Sprite": "Characters/TemplateNPC_FlowerDance"
-                },       
+                }    
                 ]
             }
         }
