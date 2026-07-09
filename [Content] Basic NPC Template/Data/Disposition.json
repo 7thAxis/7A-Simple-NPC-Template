@@ -70,7 +70,7 @@
                             // Portraits indexes that have an intense vibration, usually on shocked and angry portraits
                         "KissSpriteIndex": 16 
                             // Slot reserved on tilesheet for smooches
-                    },
+                    }
                 }
             }
     ]

@@ -1,15 +1,31 @@
 {
-    //Content Patcher includes wiki page - 
+ 
+    // Content Patcher Actions Wiki Page - https://github.com/Pathoschild/StardewMods/blob/develop/ContentPatcher/docs/author-guide.md#actions
+    // Content Patcher Includes Wiki page - https://github.com/Pathoschild/StardewMods/blob/develop/ContentPatcher/docs/author-guide/action-include.md
+
     "Changes": [
+
+         // WHAT IS A BLANK.JSON?
+            // A blank.json is an extremely important step in creating a new NPC.
+            // If you load a new file directly into the game, you cannot use content patcher features inside of it.
+            // To get around this, you load a blank file into the game, then have content patcher edit things inside of it.
+            // You will need to load a blank.json to any brand new internal file added to the game.
+            // Typically these will be dialogue and schedules for new NPCs, as well as event data for new locations.
+
         {
             "LogName": "Load Placeholder File",
             "Action": "Load",
-            "Target": "Characters/Dialogue/TemplateNPC",
+                // Loading adds a brand new file under the hood into the game
+                // If you need to edit a file after loading it, use Edit actions (see Wiki link at top)
+            "Target": "Characters/Dialogue/TemplateNPC, Characters/Schedules/TemplateNPC",
             "FromFile": "Loaders/Blank.json"
         },
         {
             "LogName": "Import Data Files",
             "Action": "Include",
+                // Including files allows you to organize your patches into subfolders.
+                // This is NOT the same thing as loading.
+                // If something isn't working, always make sure that you're including all your files.
             "FromFile": "Data/Maps.json, Data/Appearance.json, Data/Disposition.json, Data/Gifts.json, Data/Dialogue.json"
         }
     ]
