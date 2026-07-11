@@ -1,10 +1,39 @@
 {
     // Events wiki page - https://stardewvalleywiki.com/Modding:Event_data
     
-        // REMEMBER TO LOAD A BLANK.JSON TO ANY NEW CUSTOM LOCATIONS OR THE EVENT WILL NOT WORK.
+        // REMEMBER TO LOAD A BLANK.JSON TO ANY NEW CUSTOM LOCATIONS AND EVENT STRINGS OR THE EVENT WILL NOT WORK.
         // See Data/File_Loader.json for an example
 
     "Changes": [
+		// First, you'll want to load a new internal text file to put your event dialogue into.
+        // You will put your i18n inside of these keys.
+        // While it isn't necessary it will make your life and other modder's lives easier in the future.
+            // This creates a layer of dialogue access
+                // Raw Text -> Strings -> i18n
+                // You can go directly from Raw Text -> i18n, but this makes it more difficult for other mods to access dialogue for compatibility purposes and to do dynamic changes to dialogue.
+                // You can also just leave raw text in the event, though I ABSOLUTELY don't suggest that unless you're just testing things with no intention to release anything.
+        // The below Target translates to Strings/YourModID in plaintext.
+        {
+            "LogName": "Debugging Event Dialogue",
+            "Action": "EditData",
+            "Target": "Strings/{{ModID}}",
+			"Entries": {
+				"Events.DebugEvent.1": "{{i18n: Events.DebugEvent.1}}",
+				"Events.DebugEvent.2": "{{i18n: Events.DebugEvent.2}}",
+				"Events.DebugEvent.3": "{{i18n: Events.DebugEvent.3}}",
+				"Events.DebugEvent.4": "{{i18n: Events.DebugEvent.4}}",
+				"Events.DebugEvent.5": "{{i18n: Events.DebugEvent.5}}",
+				"Events.DebugEvent.6": "{{i18n: Events.DebugEvent.6}}",
+				"Events.DebugEvent.7": "{{i18n: Events.DebugEvent.7}}"
+			},
+		},
+		// Whenever you need to call one of your dialogue strings, you'll use the following key:
+		    // [LocalizedText Strings/{{ModID}}:StringKey] 
+                // OR
+            // [LocalizedText Strings\\{{ModID}}:StringKey] 
+                // (in events you need to replace / with \\ due to symbol conflicts)
+        // EX: If you need the dialogue string "Events.DebugEvent.1" in an event, you'd call [LocalizedText Strings\\{{ModID}}:Events.DebugEvent.1]
+
         {
             "LogName": "Debugging Event",
             "Action": "EditData",
@@ -18,12 +47,12 @@
                     /skippable
                     /pause 500
                         /emote TemplateNPC 28
-                        /speak TemplateNPC \"{{i18n: Events.DebugEvent.1}}\"
+                        /speak TemplateNPC \"[LocalizedText Strings\\{{ModId}}:Events.DebugEvent.1]\"
                     /move TemplateNPC 0 2 2
                     /pause 200
                     /jump TemplateNPC
-                        /speak TemplateNPC \"{{i18n: Events.DebugEvent.2}}\"
-                        /quickQuestion {{i18n: Events.DebugEvent.3}}#{{i18n: Events.DebugEvent.4}}#{{i18n: Events.DebugEvent.5}}#(break)speak TemplateNPC \"{{i18n: Events.DebugEvent.6}}\"(break)speak TemplateNPC \"{{i18n: Events.DebugEvent.7}}\"/
+                        /speak TemplateNPC \"[LocalizedText Strings\\{{ModId}}:Events.DebugEvent.2]\"
+                        /quickQuestion [LocalizedText Strings\\{{ModId}}:Events.DebugEvent.3]#[LocalizedText Strings\\{{ModId}}:Events.DebugEvent.4]#[LocalizedText Strings\\{{ModId}}:Events.DebugEvent.5]#(break)speak TemplateNPC \"[LocalizedText Strings\\{{ModId}}:Events.DebugEvent.6]\"(break)speak TemplateNPC \"[LocalizedText Strings\\{{ModId}}:Events.DebugEvent.7]\"/
                     /advancedMove TemplateNPC false -1 0 0 2 2 10
                     /pause 1500
                     /end
@@ -40,9 +69,6 @@
                     // 2 - down
                     // 3 - left
                 // Events can be either single string or break-lined, it's up to you. I prefer break-lined otherwise my eyes melt.
-                // Auto i18n events: https://nom0ri.github.io/sdv-i18nifier-app/
-                    // Always be sure to backup your code and test afterwards. Any auto program can make mistakes!
-                    // You can find the i18n keys for this event in i18n/Default/Events.json
                 // Useful commands
                     // debug ebi EVENTIDHERE - Forces an event to play regardless of conditions
                     // debug ee - Force ends an event
@@ -51,3 +77,5 @@
                         // When editing i18n dialogue run "reload_i18n" followed by "patch reload MODIDHERE"
     ]
 }
+
+// THIS TEMPLATE IS WRITTEN BY 7THAXIS AND DOLPHINISNOTAFISH. DO NOT REMOVE THIS TEXT.

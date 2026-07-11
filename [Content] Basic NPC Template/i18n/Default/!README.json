@@ -57,10 +57,14 @@ WELCOME TO THE I18N READ ME!
         Now we'll swap out the text for the i18n key. These keys typically look like this: {{i18n: KeyHere}}.
 
             "Introduction": "{{i18n: Dialogue.Introduction}}" 
+
+        Then that's it, you're done. Dialogue will be printed in the game normally, but also be fully translatable.
     
 
-    --SECTION 2: OH GOD. WHAT DO I NAME MY KEYS?!--
+    --SECTION 3: OH GOD. WHAT DO I NAME MY KEYS?!--
+        Don't overthink it! i18n keys can 
 
+    i18n cannot accept tokens directly
 
 */
 }
