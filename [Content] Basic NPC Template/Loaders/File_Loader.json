@@ -30,7 +30,7 @@
                 // Including files allows you to organize your patches into subfolders.
                 // This is NOT the same thing as loading.
                 // If something isn't working, always make sure that you're including all your files.
-            "FromFile": "Data/Maps.json, Data/Appearance.json, Data/Disposition.json, Data/Gifts.json, Data/Dialogue.json, Data/Schedule.json"
+            "FromFile": "Data/Maps.json, Data/Appearance.json, Data/Disposition.json, Data/Gifts.json, Data/Dialogue.json, Data/Schedule.json, Data/Festivals.json"
         }
     ]
 }

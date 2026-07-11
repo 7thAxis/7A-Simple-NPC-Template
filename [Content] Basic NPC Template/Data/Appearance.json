@@ -40,7 +40,9 @@
             "Target": "Data/Characters",
             "Priority": "Late",
             "TargetField": [ "TemplateNPC" ],
-                //Change to your NPC's ID
+                // Change to your NPC's ID from Data/Disposition.json
+                    // This is a section from your character data moved to a new file because that has a tendency to run a mile long
+                    // You can put it back in you character's disposition if you prefer
             "Entries": {
                 "Appearance": [
                 {

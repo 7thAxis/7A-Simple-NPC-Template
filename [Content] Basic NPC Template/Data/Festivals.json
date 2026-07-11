@@ -1,3 +1,109 @@
 {
+    // Festival modding wiki page - https://stardewvalleywiki.com/Modding:Festival_data
     
+        // Hello, welcome to the festivals section of the template. 
+            // Let us start by saying, festivals are THE WORST!!
+            // Chunky code, character overlaps, alternating maps on different years...
+            // If your NPC wouldn't go to a particular festival, I would leave them out. 
+            // This is for both your sanity and to leave a spot open for another custom NPC.
+
+    // Useful commands for testing:
+        // debug festival seasonDay - loads the festival regardless of when it is
+        // debug year # - force changes the year to alternate the map
+            // Use these 2 outside of the festival
+        // debug ee - force ends the festival
+
+    // Overlaps causing you headaches? Try Festival Nudge.
+        // https://www.nexusmods.com/stardewvalley/mods/44141
+        // (When used in moderation, Festival Nudge is a healthy addition to any balanced diet)
+        // (7thAxis is not liable for any side effects caused by the consumption of Festival Nudge)
+
+    "Changes": [
+        {
+            "LogName": "Load Festival Dialogue",
+            "Action": "EditData",
+            "Target": "data/festivals/spring13, data/festivals/spring24",
+            "Entries": { "TemplateNPC": "{{i18n:Dialogue.Festival.{{TargetWithoutPath}}}}" }
+                // This method of loading festival dialogue avoids 5000 patches
+                // You list all the festivals you want to add dialogue for into the target, following the above format
+                // TargetWithoutPath injects "spring13" or "spring24" respectively into your i18n key.
+                    // See more info on Target tokens in Loaders/File_Loader.json
+                    // See the i18n formatting in i18n/Default/Festivals.json
+        },
+    // Egg Festival
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring13", 
+                // You need to do a patch like this for every festival
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [ "Entries", "Set-Up_additionalCharacters" ],
+                        // This is the position where your NPC stands during the player wandering part of the festival
+                    "Value": "TemplateNPC 14 53 2",
+                        // Format: NPCName x y facing direction
+                            //Facing directions:
+                                // 0 - up
+                                // 1 - right
+                                // 2 - down
+                                // 3 - left
+                    "Delimiter": "/"
+                        // Because the data you're editing is a string internally, this "/" splits it apart to prevent errors
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [ "Entries", "MainEvent_additionalCharacters" ],
+                        // This is the position where your NPC stands during the main event (in this case, the Egg Hunt)
+                    "Value": "TemplateNPC 32 64 2",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [ "Entries", "Set-Up_additionalCharacters_y2" ],
+                        // Maps alternate every year, complicating things.
+                        // Do not move your NPC if you don't have to to keep spaces open
+                        // You must code in year 2 positions or they will not appear in y2
+                    "Value": "TemplateNPC 14 53 2",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [ "Entries", "MainEvent_additionalCharacters_y2" ],
+                    "Value": "TemplateNPC 32 64 2",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+    // Flower Dance
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [ "Entries", "Set-Up_additionalCharacters" ],
+                    "Value": "TemplateNPC 45 30 2",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [ "Entries", "MainEvent_additionalCharacters" ],
+                    "Value": "TemplateNPC 23 27 3",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [ "Entries", "Set-Up_additionalCharacters_y2" ],
+                    "Value": "TemplateNPC 45 30 2",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": [ "Entries", "MainEvent_additionalCharacters_y2" ],
+                    "Value": "TemplateNPC 23 29 3",
+                    "Delimiter": "/"
+                }
+            ]
+        }
+    ]
 }
