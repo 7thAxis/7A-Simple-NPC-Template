@@ -21,7 +21,7 @@
             "Action": "Load",
                 // Loading adds a brand new file under the hood into the game
                 // If you need to edit a file after loading it, use Edit actions (see Wiki link at top)
-            "Target": "Characters/Dialogue/TemplateNPC, Characters/Schedules/TemplateNPC, Data/Events/{{ModID}}_NPCHouse_Interior, Strings/{{ModID}}",
+            "Target": "Characters/Dialogue/{{ModID}}_TemplateNPC, Characters/Schedules/{{ModID}}_TemplateNPC, Data/Events/{{ModID}}_NPCHouse_Interior, Strings/{{ModID}}",
             "FromFile": "Loaders/Blank.json"
         },
         {

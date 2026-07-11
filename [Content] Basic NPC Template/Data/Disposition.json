@@ -1,14 +1,17 @@
 {
     //Disposition Wiki Page - https://stardewvalleywiki.com/Modding:NPC_data
+        // If there isn't a comment, refer to the Wiki if you need further information
         "Changes": [
             {
                 "LogName": "Load NPC Data",
                 "Action": "EditData",
                 "Target": "Data/Characters",
                 "Entries": {
-                    "TemplateNPC": {
-                            // If there isn't a comment, refer to the Wiki if you need further information
+                    "{{ModID}}_TemplateNPC": {
+                            // This is the internal ID of your NPC.
+                            // It is highly advised to use {{ModID}}_ here, as it gives you compatibility with look up anything and makes the NPC's name unique.
                         "DisplayName": "{{i18n:Misc.NPCName}}",
+                            // This is the name that appears below the portrait of an NPC.
                         "BirthSeason": "Fall",
                         "BirthDay": 13,
                         "HomeRegion": "Town",

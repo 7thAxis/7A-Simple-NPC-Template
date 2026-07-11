@@ -5,7 +5,7 @@
         {
             "LogName": "Load NPC Schedule",
             "Action": "EditData",
-            "Target": "Characters/Schedules/TemplateNPC",
+            "Target": "Characters/Schedules/{{ModID}}_TemplateNPC",
             "Entries": {
 
             // NPCs use schedules to move around. Modders set coordinates and the game will automatically pathfind the NPC at the correct time.
@@ -25,31 +25,31 @@
                     700 7 9 0/
                     900 Town 31 69 2/
                     1200 BusStop 25 10 2/
-                    1500 {{ModID}}_NPCHouse_Interior 2 5 TemplateNPC_spininplace/
-                    2000 1 6 TemplateNPC_sleep/
+                    1500 {{ModID}}_NPCHouse_Interior 2 5 {{ModID}}_TemplateNPC_spininplace/
+                    2000 1 6 {{ModID}}_TemplateNPC_sleep/
 
 				",
                 "rain": "
 
                     630 {{ModID}}_NPCHouse_Interior 2 5 3/
-                    900 2 5 TemplateNPC_spininplace/
-                    2000 1 6 TemplateNPC_sleep/
+                    900 2 5 {{ModID}}_TemplateNPC_spininplace/
+                    2000 1 6 {{ModID}}_TemplateNPC_sleep/
 
 				",
                 "Mon": "
 
                     630 {{ModID}}_NPCHouse_Interior 2 5 3/
                     800 Town 31 69 2/
-                    1500 {{ModID}}_NPCHouse_Interior 2 5 TemplateNPC_spininplace/
-                    2000 1 6 TemplateNPC_sleep/
+                    1500 {{ModID}}_NPCHouse_Interior 2 5 {{ModID}}_TemplateNPC_spininplace/
+                    2000 1 6 {{ModID}}_TemplateNPC_sleep/
 
 				",
                 "Fri": "
 
                     0 Town 31 69 2/
                     800 BusStop 25 10 2/
-                    1000 {{ModID}}_NPCHouse_Interior 2 5 TemplateNPC_spininplace/
-                    1500 1 6 TemplateNPC_sleep/
+                    1000 {{ModID}}_NPCHouse_Interior 2 5 {{ModID}}_TemplateNPC_spininplace/
+                    1500 1 6 {{ModID}}_TemplateNPC_sleep/
 
 				",
 
@@ -85,8 +85,8 @@
             // The format is - transition into animation frames/animation loop/transition out of animation frames
             // You can specify a single frame for each to make the animation "Static"
             // Utilize these in your schedules (see examples in schedules)
-                "TemplateNPC_sleep": "17/17/17",
-                "TemplateNPC_spininplace": "0 1 2 3/0 4 8 12/3 2 1 0",
+                "{{ModID}}_TemplateNPC_sleep": "17/17/17",
+                "{{ModID}}_TemplateNPC_spininplace": "0 1 2 3/0 4 8 12/3 2 1 0",
             }
         }
   ]

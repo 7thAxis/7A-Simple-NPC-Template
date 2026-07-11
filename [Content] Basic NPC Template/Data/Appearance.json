@@ -7,18 +7,18 @@
         {
             "LogName": "Load NPC Artwork",
             "Action": "Load",
-            "Target": "Portraits/TemplateNPC, Characters/TemplateNPC, Portraits/TemplateNPC_FlowerDance, Characters/TemplateNPC_FlowerDance",
+            "Target": "Portraits/{{ModID}}_TemplateNPC, Characters/{{ModID}}_TemplateNPC, Portraits/{{ModID}}_TemplateNPC_FlowerDance, Characters/{{ModID}}_TemplateNPC_FlowerDance",
             "FromFile": "Assets/{{TargetPathOnly}}/{{TargetWithoutPath}}.png"
                 // Do not load things individually if you can avoid it, you will drive yourself bonkers! Utilize target tokens! 
                 // These can load multiple assets at once, based on your file structure.
 
-                // EXAMPLE: Portraits/TemplateNPC
+                // EXAMPLE: Portraits/{{ModID}}_TemplateNPC
 
-                // Target            = Portraits/TemplateNPC
+                // Target            = Portraits/{{ModID}}_TemplateNPC
                 // TargetPathOnly    = Portraits
                 // TargetWithoutPath = Template NPC
 
-                // EXAMPLE: Assets/{{TargetPathOnly}}/{{TargetWithoutPath}}.png BECOMES Assets/Portraits/TemplateNPC.png
+                // EXAMPLE: Assets/{{TargetPathOnly}}/{{TargetWithoutPath}}.png BECOMES Assets/Portraits/{{ModID}}_TemplateNPC.png
                 // Learn more about Target Tokens here - https://github.com/Pathoschild/StardewMods/blob/develop/ContentPatcher/docs/author-guide/tokens.md#field-references
         },
 
@@ -26,7 +26,7 @@
         {
             "LogName": "Load NPC Artwork - Alternate Version",
             "Action": "EditImage",
-            "Target": "Portraits/TemplateNPC, Characters/TemplateNPC",
+            "Target": "Portraits/{{ModID}}_TemplateNPC, Characters/{{ModID}}_TemplateNPC",
             "FromFile": "Assets/{{TargetPathOnly}}/Alternate/{{TargetWithoutPath}}.png",
             "When": { "AlternateNPCArt": true }
                 // This is a config token created in content.json
@@ -39,7 +39,7 @@
             "Action": "EditData",
             "Target": "Data/Characters",
             "Priority": "Late",
-            "TargetField": [ "TemplateNPC" ],
+            "TargetField": [ "{{ModID}}_TemplateNPC" ],
                 // Change to your NPC's ID from Data/Disposition.json
                     // This is a section from your character data moved to a new file because that has a tendency to run a mile long
                     // You can put it back in you character's disposition if you prefer
@@ -47,8 +47,8 @@
                 "Appearance": [
                 {
                     "ID": "Default",
-                    "Portrait": "Portraits/TemplateNPC",
-                    "Sprite": "Characters/TemplateNPC"
+                    "Portrait": "Portraits/{{ModID}}_TemplateNPC",
+                    "Sprite": "Characters/{{ModID}}_TemplateNPC"
                         // These assets were loaded in "Load NPC Artwork"
                 },
                 {
@@ -56,8 +56,8 @@
                     "Condition": "IS_EVENT festival_spring24",
                         // Condition for this outfit to appear
                         // Utilizes GSQs: https://stardewvalleywiki.com/Modding:Game_state_queries
-                    "Portrait": "Portraits/TemplateNPC_FlowerDance",
-                    "Sprite": "Characters/TemplateNPC_FlowerDance"
+                    "Portrait": "Portraits/{{ModID}}_TemplateNPC_FlowerDance",
+                    "Sprite": "Characters/{{ModID}}_TemplateNPC_FlowerDance"
                 }    
                 ]
             }

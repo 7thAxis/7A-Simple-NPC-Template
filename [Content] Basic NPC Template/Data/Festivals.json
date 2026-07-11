@@ -23,7 +23,7 @@
             "LogName": "Load Festival Dialogue",
             "Action": "EditData",
             "Target": "data/festivals/spring13, data/festivals/spring24",
-            "Entries": { "TemplateNPC": "{{i18n:Dialogue.Festival.{{TargetWithoutPath}}}}" }
+            "Entries": { "{{ModID}}_TemplateNPC": "{{i18n:Dialogue.Festival.{{TargetWithoutPath}}}}" }
                 // This method of loading festival dialogue avoids 5000 patches
                 // You list all the festivals you want to add dialogue for into the target, following the above format
                 // TargetWithoutPath injects "spring13" or "spring24" respectively into your i18n key.
@@ -40,7 +40,7 @@
                     "Operation": "Append",
                     "Target": [ "Entries", "Set-Up_additionalCharacters" ],
                         // This is the position where your NPC stands during the player wandering part of the festival
-                    "Value": "TemplateNPC 14 53 2",
+                    "Value": "{{ModID}}_TemplateNPC 14 53 2",
                         // Format: NPCName x y facing direction
                             //Facing directions:
                                 // 0 - up
@@ -54,7 +54,7 @@
                     "Operation": "Append",
                     "Target": [ "Entries", "MainEvent_additionalCharacters" ],
                         // This is the position where your NPC stands during the main event (in this case, the Egg Hunt)
-                    "Value": "TemplateNPC 32 64 2",
+                    "Value": "{{ModID}}_TemplateNPC 32 64 2",
                     "Delimiter": "/"
                 },
                 {
@@ -63,13 +63,13 @@
                         // Maps alternate every year, complicating things.
                         // Do not move your NPC if you don't have to to keep spaces open
                         // You must code in year 2 positions or they will not appear in y2
-                    "Value": "TemplateNPC 14 53 2",
+                    "Value": "{{ModID}}_TemplateNPC 14 53 2",
                     "Delimiter": "/"
                 },
                 {
                     "Operation": "Append",
                     "Target": [ "Entries", "MainEvent_additionalCharacters_y2" ],
-                    "Value": "TemplateNPC 32 64 2",
+                    "Value": "{{ModID}}_TemplateNPC 32 64 2",
                     "Delimiter": "/"
                 }
             ]
@@ -82,25 +82,25 @@
                 {
                     "Operation": "Append",
                     "Target": [ "Entries", "Set-Up_additionalCharacters" ],
-                    "Value": "TemplateNPC 45 30 2",
+                    "Value": "{{ModID}}_TemplateNPC 45 30 2",
                     "Delimiter": "/"
                 },
                 {
                     "Operation": "Append",
                     "Target": [ "Entries", "MainEvent_additionalCharacters" ],
-                    "Value": "TemplateNPC 23 27 3",
+                    "Value": "{{ModID}}_TemplateNPC 23 27 3",
                     "Delimiter": "/"
                 },
                 {
                     "Operation": "Append",
                     "Target": [ "Entries", "Set-Up_additionalCharacters_y2" ],
-                    "Value": "TemplateNPC 45 30 2",
+                    "Value": "{{ModID}}_TemplateNPC 45 30 2",
                     "Delimiter": "/"
                 },
                 {
                     "Operation": "Append",
                     "Target": [ "Entries", "MainEvent_additionalCharacters_y2" ],
-                    "Value": "TemplateNPC 23 29 3",
+                    "Value": "{{ModID}}_TemplateNPC 23 29 3",
                     "Delimiter": "/"
                 }
             ]

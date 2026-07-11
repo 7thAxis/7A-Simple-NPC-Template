@@ -9,7 +9,7 @@
         {
             "LogName": "NPC Dialogue",
             "Action": "EditData",
-            "Target": "Characters/Dialogue/TemplateNPC",
+            "Target": "Characters/Dialogue/{{ModID}}_TemplateNPC",
             "Entries": {
 
                 //BASIC KEYS

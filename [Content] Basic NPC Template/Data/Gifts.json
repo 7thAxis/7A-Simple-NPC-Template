@@ -13,14 +13,14 @@
             "LogName": "Gift Tastes - Patch Empty Data",
             "Action": "EditData",
             "Target": "Data/NPCGiftTastes",
-            "Entries": { "TemplateNPC": "//////////" }
+            "Entries": { "{{ModID}}_TemplateNPC": "//////////" }
         },
         {
             "LogName": "Gift Tastes - Insert Data",
             "Action": "EditData",
             "Target": "Data/NPCGiftTastes",
             "Fields": {
-                "TemplateNPC": {
+                "{{ModID}}_TemplateNPC": {
                     //Love
                     "0": "{{i18n:GiftReaction.Love}}",
                         // Even numbers inside "#" are dialogue reactions to gifts, labeled for your convenience.
@@ -57,7 +57,7 @@
         {
             "LogName": "NPC Specific Gift Dialogue",
             "Action": "EditData",
-            "Target": "Characters/Dialogue/TemplateNPC",
+            "Target": "Characters/Dialogue/{{ModID}}_TemplateNPC",
             "Entries": {
 
                 //BIRTHDAY GIFTS
