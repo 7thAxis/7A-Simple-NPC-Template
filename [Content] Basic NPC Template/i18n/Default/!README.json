@@ -1,3 +1,66 @@
 {
+/*
+
+WELCOME TO THE I18N READ ME!
+
+    --SECTION 0: What the HECK is i18n?--
+        Modding Wiki Page:  https://stardewmodding.wiki.gg/wiki/Tutorial:_How_to_make_your_mod_compatible_with_other_languages
+
+        i18n, which stands for internationalization, is the method that content patcher uses to allow for translations into other languages. 
+            Essentially it takes any display text inside your mod and puts it somewhere else that is easier for translators to access.
+            Otherwise, they would need to reupload your entire mod, and no one really wants that.
+            It has quite a few other perks, such as injecting specific tokens into a key to make multiple at once, reducing the amount of patches you need.
+            That's fairly advanced though, so don't worry about that for now. The only instance of it in this template is festival dialogue located in Data/Festivals.json
+
+    --SECTION 1: Do I haaaave to?--
+        Short answer: 
+            No.
+        Long answer: 
+            No, but you absolutely should from the start of your mod or you will regret it if/when you choose to do it to make your mod translatable. 
+            You also miss out on a lot of advanced tricks that do Super Cool Stuff and make your life easier when you get more comfortable with Content Patcher.
+            There are tools to make i18n a more automated process, such as: https://nom0ri.github.io/sdv-i18nifier-app/
+
+
+    --SECTION 2: How the sausage gets made.--
+        Ready to try out i18n?
+        
+            No?
+
+                Too bad, here comes the explanation!
+
+        i18n seems intimidating at first, but it's fairy straight forward once you get used to it. 
+            First, i18n typically only works in locations with display text. So think item names, location names, descriptions, dialogue...
+            i18n will inject your desired text into a field from another file in a mad-libs sort of way. This means yes, you can use the same key in multiple locations if text repeats.
+            
+        Lets use Data/Characters/Dialogue as an example.
+            Before i18n, you'll start with a key that looks like this:
+            
+                Data/Dialogue.json -> 
+                                 Code->
+                                   "Introduction": "Hi, this is me!"
+
+            Great, they're talking! But that dialogue is hardcoded into your mod. 
+            This means translators would need to reupload your mod or preform invasive patches to change this text.
+            So, this is where i18n keys come in...
+            You'll open an i18n json and create a new key and fill in the specified text. THIS CAN BE NAMED ANYTHING! (usually) 
+
+                i18n ->
+                    Default ->
+                        Dialogue.json ->
+                            "i18nKeyHere": "Your dialogue here."
+(For the previous example): "Dialogue.Introduction": "Hi, this is me!"
+
+        So head back to "Introduction" in Dialogue.json. and delete the display text like so:
+
+            "Introduction": "" 
+
+        Now we'll swap out the text for the i18n key. These keys typically look like this: {{i18n: KeyHere}}.
+
+            "Introduction": "{{i18n: Dialogue.Introduction}}" 
     
+
+    --SECTION 2: OH GOD. WHAT DO I NAME MY KEYS?!--
+
+
+*/
 }

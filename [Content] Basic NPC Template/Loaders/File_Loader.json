@@ -21,7 +21,7 @@
             "Action": "Load",
                 // Loading adds a brand new file under the hood into the game
                 // If you need to edit a file after loading it, use Edit actions (see Wiki link at top)
-            "Target": "Characters/Dialogue/TemplateNPC, Characters/Schedules/TemplateNPC",
+            "Target": "Characters/Dialogue/TemplateNPC, Characters/Schedules/TemplateNPC, Data/Events/{{ModID}}_NPCHouse_Interior",
             "FromFile": "Loaders/Blank.json"
         },
         {
@@ -30,7 +30,9 @@
                 // Including files allows you to organize your patches into subfolders.
                 // This is NOT the same thing as loading.
                 // If something isn't working, always make sure that you're including all your files.
-            "FromFile": "Data/Maps.json, Data/Appearance.json, Data/Disposition.json, Data/Gifts.json, Data/Dialogue.json, Data/Schedule.json, Data/Festivals.json"
+                // If there is something you want removed for any reason, just delete the file from the list and delete the associated file.
+                // If you want to add a NEW file, add it to this list.
+            "FromFile": "Data/Maps.json, Data/Appearance.json, Data/Disposition.json, Data/Gifts.json, Data/Dialogue.json, Data/Schedule.json, Data/Festivals.json, Data/Events.json"
         }
     ]
 }

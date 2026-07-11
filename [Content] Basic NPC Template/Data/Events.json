@@ -1,3 +1,53 @@
 {
+    // Events wiki page - https://stardewvalleywiki.com/Modding:Event_data
     
+        // REMEMBER TO LOAD A BLANK.JSON TO ANY NEW CUSTOM LOCATIONS OR THE EVENT WILL NOT WORK.
+        // See Data/File_Loader.json for an example
+
+    "Changes": [
+        {
+            "LogName": "Debugging Event",
+            "Action": "EditData",
+            "Target": "Data/Events/{{ModID}}_NPCHouse_Interior",
+            "Entries": {
+                "{{ModID}}_DebugEvent/Friendship TemplateNPC 500": "
+                    fallFest
+                    /6 14
+                    /farmer 3 10 0 TemplateNPC 4 5 2
+                    /ignoreCollisions TemplateNPC
+                    /skippable
+                    /pause 500
+                        /emote TemplateNPC 28
+                        /speak TemplateNPC \"{{i18n: Events.DebugEvent.1}}\"
+                    /move TemplateNPC 0 2 2
+                    /pause 200
+                    /jump TemplateNPC
+                        /speak TemplateNPC \"{{i18n: Events.DebugEvent.2}}\"
+                        /quickQuestion {{i18n: Events.DebugEvent.3}}#{{i18n: Events.DebugEvent.4}}#{{i18n: Events.DebugEvent.5}}#(break)speak TemplateNPC \"{{i18n: Events.DebugEvent.6}}\"(break)speak TemplateNPC \"{{i18n: Events.DebugEvent.7}}\"/
+                    /advancedMove TemplateNPC false -1 0 0 2 2 10
+                    /pause 1500
+                    /end
+                " ,            
+            }
+        }
+        // I didn't really sign up for explaining the intricacies of eventing, so uuuuhhhhh have fun.
+            // NOTES:
+                // Only use Move or advancedMove for longer events. They tend to not get along very well and cause void walking.
+                    // advancedMove is more complicated, but suggested to learn as it allows you to do a lot more dynamic movement.
+                // Facing directions:
+                    // 0 - up
+                    // 1 - right
+                    // 2 - down
+                    // 3 - left
+                // Events can be either single string or break-lined, it's up to you. I prefer break-lined otherwise my eyes melt.
+                // Auto i18n events: https://nom0ri.github.io/sdv-i18nifier-app/
+                    // Always be sure to backup your code and test afterwards. Any auto program can make mistakes!
+                    // You can find the i18n keys for this event in i18n/Default/Events.json
+                // Useful commands
+                    // debug ebi EVENTIDHERE - Forces an event to play regardless of conditions
+                    // debug ee - Force ends an event
+                    // reload_i18n - Updates the text in your i18n for the game to read
+                    // patch reload MODIDHERE - Updates your mod in-game so you don't have to restart the game
+                        // When editing i18n dialogue run "reload_i18n" followed by "patch reload MODIDHERE"
+    ]
 }

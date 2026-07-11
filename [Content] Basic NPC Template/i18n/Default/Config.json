@@ -1,12 +1,15 @@
 {
     // Config i18n documentation - https://github.com/Pathoschild/StardewMods/blob/develop/ContentPatcher/docs/author-guide/config.md#
     // Config keys are the only i18n keys that need to be specifically named.
+    // This text OVERRIDES the text in your content.json configuration section. 
+        // It does not change internal functionality, only the display.
     
     "Config.section.Gameplay.name": "Graphics",
     "Config.section.TestSection.name": "Test",
 
     "Config.TestConfig.name": "Test Config (Does Nothing)",
-    "Config.TestConfig.description": "A config that does nothing, but shows how to do a dropdown list.",
+    "Config.TestConfig.description": "A config that does nothing, but shows how to do a dropdown list.\nDelete it if you don't need it.",
+        // \n creates a break-line in certain locations where text can be added.
     "Config.TestConfig.values.Option1": "Option 1",
     "Config.TestConfig.values.Option2": "Option 2",
     "Config.TestConfig.values.Option3": "Option 3",
