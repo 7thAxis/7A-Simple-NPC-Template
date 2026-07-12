@@ -30,7 +30,7 @@
 
         // Dynamic tokens are essentially custom variables that content patcher doesn't provide that you define yourself.
         // You can use these in when conditions to enable and disable patches, among other things.
-            // Dynamic token documentation -
+            // Dynamic token documentation - https://github.com/Pathoschild/StardewMods/blob/develop/ContentPatcher/docs/author-guide/tokens.md#dynamic-tokens
 
         // Token Defaults
             // It is always best practice to have default value for a token to prevent potential errors
@@ -66,10 +66,6 @@
         // You can technically put them here in content.json, but as mods get larger it gets unruly.
         // As such, I've found moving data importing into its own file to be less overwhelming.
     ]
-
-
-    //  FIX INTERIOR MAP COLISSION
-
-
 }
-// THIS TEMPLATE PAGE WAS WRITTEN BY 7THAXIS. DO NOT REMOVE THIS TEXT.
+    // THIS TEMPLATE PAGE WAS WRITTEN BY 7THAXIS. DO NOT REMOVE THIS TEXT. 
+    // Source: https://www.nexusmods.com/stardewvalley/mods/49041
