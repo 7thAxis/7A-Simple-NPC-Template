@@ -3,7 +3,7 @@
 
 WELCOME TO THE I18N READ ME!
 
-    --SECTION 0: What the HECK is i18n?--
+--SECTION 0: What the HECK is i18n?--
         Modding Wiki Page:  https://stardewmodding.wiki.gg/wiki/Tutorial:_How_to_make_your_mod_compatible_with_other_languages
 
         i18n, which stands for internationalization, is the method that content patcher uses to allow for translations into other languages. 
@@ -12,7 +12,7 @@ WELCOME TO THE I18N READ ME!
             It has quite a few other perks, such as injecting specific tokens into a key to make multiple at once, reducing the amount of patches you need.
             That's fairly advanced though, so don't worry about that for now. The only instance of it in this template is festival dialogue located in Data/Festivals.json
 
-    --SECTION 1: Do I haaaave to?--
+--SECTION 1: Do I haaaave to?--
         Short answer: 
             No.
         Long answer: 
@@ -21,7 +21,7 @@ WELCOME TO THE I18N READ ME!
             There are tools to make i18n a more automated process, such as: https://nom0ri.github.io/sdv-i18nifier-app/
 
 
-    --SECTION 2: How the sausage gets made.--
+--SECTION 2: How the sausage gets made.--
         Ready to try out i18n?
         
             No?
@@ -48,7 +48,7 @@ WELCOME TO THE I18N READ ME!
                     Default ->
                         Dialogue.json ->
                             "i18nKeyHere": "Your dialogue here."
-(For the previous example): "Dialogue.Introduction": "Hi, this is me!"
+                            "Dialogue.Introduction": "Hi, this is me!" (For the previous example)
 
         So head back to "Introduction" in Dialogue.json. and delete the display text like so:
 
@@ -61,10 +61,53 @@ WELCOME TO THE I18N READ ME!
         Then that's it, you're done. Dialogue will be printed in the game normally, but also be fully translatable.
     
 
-    --SECTION 3: OH GOD. WHAT DO I NAME MY KEYS?!--
-        Don't overthink it! i18n keys can 
+--SECTION 3: OH GOD. WHAT DO I NAME MY KEYS?!--
+        Don't overthink it! With a few exceptions, i18n keys can be named anything you want.
+        This allows you to format your keys in a way that works best for you.
+            Examples: Youri18nKey, Your_i18n_Key, Your.i18n.Key, Your.i18n_Key
 
-    i18n cannot accept tokens directly
+        A couple of things require a specific name for an i18n key
+           Generic Mod Config Config i81n: https://github.com/Pathoschild/StardewMods/blob/develop/ContentPatcher/docs/author-guide/config.md
+           Tokens that have tokens injected into them: See Data/Festivals.json Dialogue patch and i18n/Default/Festival.json
+           Other things that I'm likely not aware of
+        
+--SECTION 4: How do I sort my files?--
+        i18n files are fairly straight forward. You can either have a single default.json or a Default folder with multiple smaller json files.
+            Single default.json - Good for tiny mods that don't need a lot of organization
+            Multiple .json files - Good for a mod with many moving parts, like an NPC or an expansion. These files can be named anything.
+
+        These will be your potential file structures:
+            i18n
+                -> Default.json
+
+            i18n
+                -> Default
+                    -> Config.json
+                    -> Dialogue.json
+                    -> Events.json
+                    -> ...
+
+--SECTION 5: Anything else I should know?--
+        i18n files can use any in-game commands for dialogue and such, but it CANNOT use Content Patcher features.
+
+            This includes, but is not limited to:
+                * Loading files
+                * Including files
+                * Editing files
+                * Text Operations
+                * Tokens
+            
+            There are some work around for using tokens in i18n, though this is fairly advanced. 
+            You should get comfortable with basic Content Patcher modding before learning these methods:
+                Localized Text: https://stardewvalleywiki.com/Modding:Tokenizable_strings 
+                    * Preferred
+                    * Cleaner 
+                    * Typically requires loading a new internal file for your strings
+
+                Pass-in Tokens:  https://github.com/Pathoschild/StardewMods/blob/develop/ContentPatcher/docs/author-guide/translations.md#can-i-use-content-patcher-tokens-in-i18n-files
+                    * Less ideal
+                    * Messier
+                    * Doesn't require loading a new internal file
 
 */
 }
