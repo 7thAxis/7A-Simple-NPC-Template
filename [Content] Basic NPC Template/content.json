@@ -26,7 +26,35 @@
         }
     },
 
-    //"DynamicTokens": {},
+    "DynamicTokens": [
+
+        // Dynamic tokens are essentially custom variables that content patcher doesn't provide that you define yourself.
+        // You can use these in when conditions to enable and disable patches, among other things.
+            // Dynamic token documentation -
+
+        // Token Defaults
+            // It is always best practice to have default value for a token to prevent potential errors
+            // EX: You are on the save load screen where the values don't exist
+
+        { "Name": "TodaysDate", "Value": "N/A" },
+        { "Name": "IsEggFestivalToday", "Value": false },
+
+        //Token Conditions
+        {
+            "Name": "TodaysDate",
+            "Value": "{{Season}} {{Day}}"     
+                // This token will resolve to the current Season and Day (ex: Spring 1), essentially merging the tokens.
+        },
+        {
+            "Name": "IsSpringFestivalToday",
+            "Value": true,
+            "When": { "TodaysDate": "Spring 13, Spring 24" }
+                // This token is checking if the previous token, Today's date is Spring 13 or Spring 24, the days of spring festivals.
+                // This token isn't necessarily very useful, just an example.
+                // If you want to check this you can just use the when condition on this token elsewhere in the mod.
+        }
+
+    ],
 
     "Changes": [
         {
