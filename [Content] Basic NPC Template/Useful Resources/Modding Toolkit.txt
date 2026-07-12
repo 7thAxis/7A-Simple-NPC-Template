@@ -176,10 +176,10 @@ Facing Directions & Movements
         4 = Up
 
     Movement Positive/negative
-        Up     -X
+        Up     -Y
         Down    Y
-        Left   -Y
-        Right   Y
+        Left   -X
+        Right   X
 
     Chart Version:
 
@@ -187,7 +187,7 @@ Facing Directions & Movements
       ___|___________________|
     | FD |  0 |  1 |  2 |  3 |
     | AM |  4 |  1 |  2 |  3 | 
-    | MV | -x |  y |  x | -y |
+    | MV | -y |  x |  y | -x |
 
 // THIS TEMPLATE PAGE WAS WRITTEN BY 7THAXIS. DO NOT REMOVE THIS TEXT. 
 // Source: https://www.nexusmods.com/stardewvalley/mods/49041
