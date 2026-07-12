@@ -8,6 +8,7 @@
         // General syntax for version numbers: MajorVersion.ContentUpdates.Bugfixes
         // Alpha - Mod is in development, Beta - Mod is in release testing, Hotfix - Emergency bug fix
         // Change/remove -alpha as you make progress
+        // Reset numbers when you move from alpha, beta to full release
 	"Description": "Template for a simple NPC by 7thAxis.",
 	"UniqueID": "7thAxis.NPCTemplate", 
         // Change this to an ID unique to you.
