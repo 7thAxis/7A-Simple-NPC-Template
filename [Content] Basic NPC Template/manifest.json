@@ -2,7 +2,7 @@
 
     //Manifest Wiki Page - https://stardewvalleywiki.com/Modding:Modder_Guide/APIs/Manifest
 
-	"Name": "7A Simple NPC Template",
+	"Name": "Axell's Basic NPC Template",
 	"Author": "7thAxis",
 	"Version": "1.0.0-alpha",
         // General syntax for version numbers: MajorVersion.ContentUpdates.Bugfixes
