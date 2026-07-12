@@ -17,8 +17,9 @@
                 // Target            = Portraits/{{ModID}}_TemplateNPC
                 // TargetPathOnly    = Portraits
                 // TargetWithoutPath = Template NPC
+                // ModID             = The ID of your mod
 
-                // EXAMPLE: Assets/{{TargetPathOnly}}/{{TargetWithoutPath}}.png BECOMES Assets/Portraits/{{ModID}}_TemplateNPC.png
+                // EXAMPLE: Assets/{{TargetPathOnly}}/{{TargetWithoutPath}}.png BECOMES Assets/Portraits/7thAxis.NPCTemplate_TemplateNPC.png
                 // Learn more about Target Tokens here - https://github.com/Pathoschild/StardewMods/blob/develop/ContentPatcher/docs/author-guide/tokens.md#field-references
         },
 
