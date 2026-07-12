@@ -183,7 +183,7 @@ Facing Directions & Movements
 
     Chart Version:
 
-         | ^ |  > |  v |  <  | 
+         | ^ |  > |  v  |  < | 
       ___|___________________|
     | FD |  0 |  1 |  2 |  3 |
     | AM |  4 |  1 |  2 |  3 | 
