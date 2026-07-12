@@ -1,0 +1,193 @@
+-----------------------------------------------------------------------------------------------------------------------------
+RECOMMENDED EDITORS:
+        Visual Studio Code: https://code.visualstudio.com/
+            Pros: Easy extension support
+            Cons: Bloated with Microsoft extras
+    OR
+        Visual Studio Codium: https://vscodium.com/
+            Pros: Open source, lighter
+            Cons: Less straightforward extension support
+
+    Important Additions: 
+        Stardew Syntax Extension: https://marketplace.visualstudio.com/items?itemName=linkoid.stardew-syntax
+        JSON with Comments: (Setting found in bottom right corner, "Select Language Mode" on hover)
+
+    SUGGESTED NOT TO USE:
+        Notepad++ 
+            Harder to use
+            Less optimized for SDV
+            No error checking out of the box
+        Visual Studio
+            Commonly accidentally confused for Visual Studio Code
+            Very heavy on PC memory
+            Harder to navigate
+            Oriented more for C# modders
+-----------------------------------------------------------------------------------------------------------------------------
+RECOMMENDED TOOLS:
+    SMAPI:                            https://smapi.io/
+    Tiled Map Editor:                 https://www.mapeditor.org/
+    Tiled Tilesheetinator Extension:  https://www.nexusmods.com/stardewvalley/mods/40281
+    Button's Map Fixer:               https://stardew.button.gay/tools/mapfixer
+    Audacity Audio Editor:            https://www.audacityteam.org/
+    Paint.NET:                        https://paint.net/
+    BoltBait PDN Plugin Pack:         https://forums.paint.net/BoltBaitPluginPack
+    Aseprite:                         https://www.aseprite.org/
+
+-----------------------------------------------------------------------------------------------------------------------------
+LEARNING TOOLS
+    Button's JSON Tutorial:   https://stardew.button.gay/tutorials/json
+    SDV Modding Wiki:         https://stardewmodding.wiki.gg/
+    SDV Wiki:                 https://stardewvalleywiki.com/Stardew_Valley_Wiki
+    Content Patcher Docs:     https://github.com/Pathoschild/StardewMods/blob/develop/ContentPatcher/docs/author-guide.md
+-----------------------------------------------------------------------------------------------------------------------------
+PARSERS: 
+    SMAPI Log:              https://smapi.io/log (If you experience an error GET A LOG before asking for help)
+    JSON Validator:         https://smapi.io/json (If you're using VSC on the correct settings, this is built in)
+-----------------------------------------------------------------------------------------------------------------------------
+USEFUL MODS FOR DEBUGGING:
+    Content Patcher          https://www.nexusmods.com/stardewvalley/mods/1915
+    Generic Mod Config Menu  https://www.nexusmods.com/stardewvalley/mods/5098
+    Turbo                    https://www.nexusmods.com/stardewvalley/mods/23835
+    Lookup Anything          https://www.nexusmods.com/stardewvalley/mods/34968
+    Event Lookup             https://www.nexusmods.com/stardewvalley/mods/8505
+    Soundboard               https://www.nexusmods.com/stardewvalley/mods/34968
+    CJB Cheats               https://www.nexusmods.com/stardewvalley/mods/4
+    CJB Item Spawner         https://www.nexusmods.com/stardewvalley/mods/93
+    Skip Intro               https://www.nexusmods.com/stardewvalley/mods/533
+    Debug Mode               https://www.nexusmods.com/stardewvalley/mods/679
+    No-Clip                  https://www.nexusmods.com/stardewvalley/mods/3900
+    Reset Terrain Features   https://www.nexusmods.com/stardewvalley/mods/44842
+    NPC Map Locations        https://www.nexusmods.com/stardewvalley/mods/239  
+    UI Info Suite            https://www.nexusmods.com/stardewvalley/mods/7098
+    Data Layers              https://www.nexusmods.com/stardewvalley/mods/1691
+    GI NPC Exclusions        https://www.nexusmods.com/stardewvalley/mods/46738
+
+    If you're prone to headaches, I also suggest a tone downed recolor:
+
+    Vibrant Pastoral Redrawn   https://www.nexusmods.com/stardewvalley/mods/6367
+    DaisyNiko's Earthy Recolor https://www.nexusmods.com/stardewvalley/mods/5255
+-----------------------------------------------------------------------------------------------------------------------------
+USEFUL FRAMEWORKS:
+    BETAS                      https://www.nexusmods.com/stardewvalley/mods/27100
+    Spacecore                  https://www.nexusmods.com/stardewvalley/mods/1348
+    MEEP                       https://www.nexusmods.com/stardewvalley/mods/14493
+    MMAP                       https://www.nexusmods.com/stardewvalley/mods/28423              
+    Farm Type Manager          https://www.nexusmods.com/stardewvalley/mods/3231
+    Custom Companions          https://www.nexusmods.com/stardewvalley/mods/8626
+    Extra Animal Configs       https://www.nexusmods.com/stardewvalley/mods/25328
+    Extra Machine Configs      https://www.nexusmods.com/stardewvalley/mods/22256
+    Custom Museum Framework    https://www.nexusmods.com/stardewvalley/mods/34530
+    Trinket Tinker             https://www.nexusmods.com/stardewvalley/mods/29073
+    Item Extensions            https://www.nexusmods.com/stardewvalley/mods/20357
+    Have More Kids             https://www.nexusmods.com/stardewvalley/mods/36459
+    Livestock Bazar            https://www.nexusmods.com/stardewvalley/mods/29997
+    Stardew Squad              https://www.nexusmods.com/stardewvalley/mods/35341
+    Sound Tweaker              https://www.nexusmods.com/stardewvalley/mods/14767
+    NPC Relationship Tags      https://www.nexusmods.com/stardewvalley/mods/40276
+    Perfection Exclusions      https://www.nexusmods.com/stardewvalley/mods/31247
+    Tutorials                  https://www.nexusmods.com/stardewvalley/mods/48555
+    Cross Mod Compat Tokens    https://www.nexusmods.com/stardewvalley/mods/28284
+    Custom Emotes              https://www.nexusmods.com/stardewvalley/mods/39656
+    Custom Schedule Keys       https://www.nexusmods.com/stardewvalley/mods/31271
+    Furniture Machine          https://www.nexusmods.com/stardewvalley/mods/31678
+    Machine Terrain Framework  https://www.nexusmods.com/stardewvalley/mods/22975
+-----------------------------------------------------------------------------------------------------------------------------
+USEFUL CONSOLE COMMANDS:
+    Full List: https://stardewvalleywiki.com/Modding:Console_commands
+        reload_i18n                            Force reloads your i18n changes                  
+        patch reload MODID                     Force reloads your entire mod
+        patch reload ModID FilePath            Force reloads a specific file in your mod
+        patch summary MODID full               Shows a list of all your tokens and patches and if they're being applied without shortened tokens
+        patch summary full                     Shows a list of ALL tokens and patches added by all installed mods without shortened tokens
+        patch summary full asset InternalFile  Shows patches affecting a specific asset
+        patch export Internalfile              Exports the data currently active in the game. Good to see if things are loading.
+        debug ebi EventID                      Force plays an event regardless of conditions
+        debug ee                               Force ends and event or festival
+        debug nd                               Forces the day to end and update the world state
+        debug festival seasonday               Forces a specific festival to load regardless of season
+        debug wtc NPCID                        Warps player to specified NPC
+        debug wctm NPCID                       Warps specified NPC to player
+        debug killNPC NPCID                    Removes NPC for the day, useful if they decided to duplicate
+        debug warp location                    Warps player to specified location
+        debug clearmail                        Wipes all current active flags  
+        debug seenmail MailID add|remove       Marks a specific flag as seen without needing to naturally activate it
+        debug gq GSQhere                       Runs a GSQ and displays the current state of the condition on the save (https://stardewvalleywiki.com/Modding:Game_state_queries)
+        debug loaddialogue NPCID Key           Force loads a specific NPC dialogue
+        debug where NPCID                      Locates an NPC and displays their location and x, y coordinates
+        debug time time                        Sets to specified time     
+        debug season season                    Sets to specified season
+        debug day #                            Sets specified day of month
+        debug clear                            Clears player inventory
+        debug action TriggerAction             Force runs a specific Trigger Action (https://stardewvalleywiki.com/Modding:Trigger_actions)
+
+        Note: Commands that change the time/season/day may cause instabilities. Consider using CJB Cheats.
+
+-----------------------------------------------------------------------------------------------------------------------------
+USEFUL EVENT TRICKS/COMMAND TEMPLATES:
+-----------------------------------------------------------------------------------------------------------------------------
+
+Templates:
+
+    advancedMove NPCID Loop? x y x y FacingDirection PauseDuration
+
+    animate NPCID FlipDirection? Loop? FrameDuration Frames
+
+    temporaryAnimatedSprite TexturePath x-startposition y-endposition Width-px Height-px FrameDuration FrameCount #OfAnimationLoops SpawnTileX SpawnTileY Flicker Flip LayerDepth AlphaFade Scale ScaleChange Rotation RotationChange AdvancedFlags(see Wiki)
+
+    addTemporaryActor AssetName Width Height SpawnX SpawnY FacingDirecting Breaths? CharacterAnimalorMonster?
+
+    quickQuestion QuestionText#Answer1#Answer2#Answer3(break)Answer1Response(break)Answer2Response(break)Answer3Response
+
+Overlooked commands:
+    stopAdvancedMoves          Force stops all active advanced moves, including looping ones
+    waitForAllStationary       Waits for all actors to stop moving before continuing
+    proceedPosition NPCID      Waits for specified NPC to stop moving before continuing
+    beginSimultaneousCommand   Marks start of multiple commands that should run at the same time
+    endSimultaneousCommand     Marks start of multiple commands that should run at the same time
+    clearTempSprites           Force Clears temporary animated sprites
+
+Emotes list:
+    4- empty can
+    8- question mark
+    12- angry
+    16- exclamation
+    20- heart
+    24- sleep
+    28- sad
+    32- happy
+    36- x
+    40- pause
+    52- video game
+    56- music note
+    60- blush 
+
+Facing Directions & Movements
+
+    Typical
+        0 = up
+        1 = right
+        2 = down
+        3 = left
+
+    Advanced Move
+        1 = right
+        2 = down
+        3 = left
+        4 = Up
+
+    Movement Positive/negative
+        Up     -X
+        Down    Y
+        Left   -Y
+        Right   Y
+
+    Chart Version:
+
+         | ^ |  > |  v |  <  | 
+      ___|___________________|
+    | FD |  0 |  1 |  2 |  3 |
+    | AM |  4 |  1 |  2 |  3 | 
+    | MV | -x |  y |  x | -y |
+
+// THIS TEMPLATE PAGE WAS WRITTEN BY 7THAXIS. DO NOT REMOVE THIS TEXT. 
+// Source: https://www.nexusmods.com/stardewvalley/mods/49041
