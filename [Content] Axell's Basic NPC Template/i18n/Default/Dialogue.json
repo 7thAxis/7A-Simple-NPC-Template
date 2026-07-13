@@ -47,7 +47,7 @@
   "Dialogue.WinterWed10": "Buuurrrr sure is chimby.",
 
   "Dialogue.SpringDay1": "Spring 1? More like spring fun!",
-  "Dialogue.WinterDay25Year2": "%{{ModID}}_TemplateNPC stares into your soul.",
+  "Dialogue.WinterDay25Year2": "%TemplateNPC stares into your soul.",
 
   "Dialogue.FlowerDanceAccept": "Yes",
   "Dialogue.FlowerDanceReject": "No i have 2 left feet.",
@@ -55,7 +55,7 @@
   "Dialogue.BusStopDialogue": "This is the Bus Stop. Yup it is.",
   "Dialogue.OutsideHouse": "Wow, I'm standing at this exact spot in town! Crazy, huh?",
 
-  "Dialogue.Introduction": "Hello, my name is {{ModID}}_TemplateNPC!",
+  "Dialogue.Introduction": "Hello, my name is TemplateNPC!",
   "Dialogue.StartCommunityCenter": "You started the community center thingy woah.",
   "Dialogue.FinishCommunityCenter": "Woah the community center is up and running or whatever cool beans.",
 
